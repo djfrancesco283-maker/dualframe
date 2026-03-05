@@ -1,5 +1,5 @@
-/* ============================================
-   DUALFRAME — Dark Minimalist Brand Agency
+﻿/* ============================================
+   DUALFRAME â€” Dark Minimalist Brand Agency
    ============================================ */
 
 /* Reset & Base */
@@ -949,7 +949,7 @@ footer {
 }
 
 /* ============================================
-   ABOUT — REWRITE
+   ABOUT â€” REWRITE
    ============================================ */
 .about-quote {
   margin-bottom: 2.5rem;
@@ -1113,7 +1113,7 @@ footer {
   line-height: 1.5;
 }
 .pricing-list li::before {
-  content: '✓';
+  content: 'âœ“';
   position: absolute;
   left: 0;
   color: var(--accent-2);
@@ -1222,9 +1222,20 @@ footer {
 }
 
 @media (max-width: 480px) {
-  .hero-title { font-size: clamp(2.5rem, 12vw, 4rem); }
+  .hero-content { padding: 96px 1rem 56px; }
+  .hero-title {
+    font-size: clamp(1.75rem, 9.2vw, 2.7rem);
+    line-height: 0.98;
+    letter-spacing: -0.02em;
+    word-break: break-word;
+  }
+  .hero-title br { display: none; }
+  .outline-text { display: block; }
+  .hero-sub { font-size: 1rem; }
   .hero-cta { flex-direction: column; align-items: flex-start; }
   .footer-grid { grid-template-columns: 1fr; }
   .footer-brand { grid-column: auto; }
   .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
 }
+
+
