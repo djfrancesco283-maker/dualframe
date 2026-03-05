@@ -1,0 +1,143 @@
+/* ============================================
+   DUALFRAME — Project Page CSS
+   ============================================ */
+
+.project-hero {
+  padding-top: 120px;
+  padding-bottom: 3rem;
+  background: var(--bg);
+}
+
+.project-hero .container {
+  max-width: 900px;
+}
+
+.project-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+  transition: var(--transition);
+}
+
+.project-back:hover {
+  color: var(--white);
+}
+
+.project-meta {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.project-meta span {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.9rem;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 100px;
+  color: var(--muted);
+}
+
+.project-title {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 800;
+  line-height: 1.05;
+  margin-bottom: 1.25rem;
+}
+
+.project-client {
+  font-size: 1rem;
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
+.project-cover {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 4rem;
+  display: block;
+}
+
+.project-cover img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+
+.project-body {
+  max-width: 680px;
+  margin: 0 auto 5rem;
+  padding: 0 1.5rem;
+}
+
+.project-body p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 1.5rem;
+}
+
+.project-colors {
+  max-width: 900px;
+  margin: 0 auto 5rem;
+  padding: 0 1.5rem;
+}
+
+.project-colors h4 {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.color-swatches {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.color-swatch {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.project-cta {
+  text-align: center;
+  padding: 5rem 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.project-cta p {
+  color: var(--muted);
+  margin-bottom: 2rem;
+  font-size: 1.125rem;
+}
+
+@media (max-width: 768px) {
+  .project-hero {
+    padding-top: 100px;
+  }
+  .project-body {
+    padding: 0 1rem;
+  }
+  .project-cover {
+    padding: 0 1rem;
+    margin-bottom: 2.5rem;
+  }
+  .project-colors {
+    padding: 0 1rem;
+    margin-bottom: 3rem;
+  }
+}
