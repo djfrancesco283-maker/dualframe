@@ -95,32 +95,51 @@ document.querySelectorAll('.work-item').forEach(item => {
 // ─── Contact form ────────────────────────────
 const form = document.getElementById('contactForm');
 
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
+if (form) {
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
 
-  const btn = form.querySelector('.btn-submit');
-  const originalText = btn.textContent;
+    const action = form.getAttribute('action');
+    const btn = form.querySelector('.btn-submit');
+    const originalText = btn.textContent;
 
-  btn.textContent = 'Invio in corso...';
-  btn.disabled = true;
-  btn.style.opacity = '0.7';
+    if (!action || action.includes('REPLACE_WITH_YOUR_FORM_ID')) {
+      alert("Configura prima Formspree: sostituisci REPLACE_WITH_YOUR_FORM_ID nell'action del form.");
+      return;
+    }
 
-  // Simulate async send
-  setTimeout(() => {
-    btn.textContent = 'Messaggio inviato!';
-    btn.style.background = '#2ecc71';
-    btn.style.color = '#000';
+    btn.textContent = 'Invio in corso...';
+    btn.disabled = true;
+    btn.style.opacity = '0.7';
 
-    setTimeout(() => {
-      btn.textContent = originalText;
-      btn.disabled = false;
-      btn.style.opacity = '1';
-      btn.style.background = '';
-      btn.style.color = '';
+    try {
+      const response = await fetch(action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' }
+      });
+
+      if (!response.ok) throw new Error('submit_failed');
+
+      btn.textContent = 'Messaggio inviato!';
+      btn.style.background = '#2ecc71';
+      btn.style.color = '#000';
       form.reset();
-    }, 3000);
-  }, 1200);
-});
+    } catch (error) {
+      btn.textContent = 'Errore. Riprova';
+      btn.style.background = '#e74c3c';
+      btn.style.color = '#fff';
+    } finally {
+      setTimeout(() => {
+        btn.textContent = originalText;
+        btn.disabled = false;
+        btn.style.opacity = '1';
+        btn.style.background = '';
+        btn.style.color = '';
+      }, 2200);
+    }
+  });
+}
 
 // ─── Smooth section links ─────────────────────
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
