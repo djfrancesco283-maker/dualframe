@@ -1184,6 +1184,43 @@ footer {
 .reveal:nth-child(5) { transition-delay: 0.4s; }
 
 /* ============================================
+   HERO — CINEMATIC ENTRANCE
+   ============================================ */
+@keyframes fadeUpHero {
+  from { opacity: 0; transform: translateY(36px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Hero elements animate on load (not on scroll) */
+#hero .reveal {
+  transition: none;
+  animation: fadeUpHero 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+#hero .hero-tag   { animation-delay: 0.1s; }
+#hero .hero-title { animation-delay: 0.3s; }
+#hero .hero-sub   { animation-delay: 0.55s; }
+#hero .hero-cta   { animation-delay: 0.75s; }
+
+/* Floating glow orbs */
+@keyframes glowDrift {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50%       { transform: translateY(-40px) scale(1.08); }
+}
+@keyframes glowDriftAlt {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50%       { transform: translateY(30px) scale(0.94); }
+}
+.glow-orange { animation: glowDrift 10s ease-in-out infinite; }
+.glow-teal   { animation: glowDriftAlt 13s ease-in-out infinite; }
+
+/* Outline text shimmer */
+@keyframes outlineShimmer {
+  0%, 100% { -webkit-text-stroke-color: rgba(255,255,255,0.2); }
+  50%       { -webkit-text-stroke-color: rgba(255,255,255,0.55); }
+}
+.outline-text { animation: outlineShimmer 4s ease-in-out infinite; }
+
+/* ============================================
    RESPONSIVE
    ============================================ */
 @media (max-width: 1024px) {
@@ -1199,12 +1236,17 @@ footer {
   .nav-links { display: none; }
   .hamburger { display: flex; }
 
-  .hero-content { padding: 100px 1.5rem 60px; }
+  .hero-content { padding: 100px 1.25rem 60px; }
   .hero-scroll { display: none; }
 
-  section { padding: 5rem 0; }
+  section { padding: 4rem 0; }
 
-  .services-grid { grid-template-columns: 1fr; }
+  .container { padding: 0 1.25rem; }
+
+  .section-header { margin-bottom: 2.5rem; }
+
+  .services-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .service-card { padding: 1.75rem; }
   .service-arrow { display: none; }
 
   .work-grid { grid-template-columns: 1fr; }
@@ -1219,23 +1261,41 @@ footer {
   .footer-brand { grid-column: 1 / -1; }
 
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .marquee-wrap { font-size: 0.75rem; }
+
+  .contact-direct { flex-direction: column; gap: 1rem; }
 }
 
 @media (max-width: 480px) {
   .hero-content { padding: 96px 1rem 56px; }
   .hero-title {
-    font-size: clamp(1.75rem, 9.2vw, 2.7rem);
-    line-height: 0.98;
+    font-size: clamp(2rem, 10vw, 3rem);
+    line-height: 1;
     letter-spacing: -0.02em;
     word-break: break-word;
   }
   .hero-title br { display: none; }
   .outline-text { display: block; }
-  .hero-sub { font-size: 1rem; }
-  .hero-cta { flex-direction: column; align-items: flex-start; }
+  .hero-sub { font-size: 0.95rem; max-width: 100%; }
+  .hero-tag { font-size: 0.65rem; }
+  .hero-cta {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+  .hero-cta .btn-primary,
+  .hero-cta .btn-ghost {
+    text-align: center;
+    width: 100%;
+  }
+  .container { padding: 0 1rem; }
   .footer-grid { grid-template-columns: 1fr; }
   .footer-brand { grid-column: auto; }
   .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
+  .about-quote blockquote { font-size: 1.3rem; padding-left: 1.25rem; }
+  .pricing-card { padding: 1.75rem 1.25rem; }
+  .section-header h2 { font-size: clamp(2rem, 8vw, 2.5rem); }
 }
 
 
