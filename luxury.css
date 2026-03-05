@@ -209,6 +209,8 @@
 }
 
 #services .service-card {
+  display: block;
+  cursor: pointer;
   min-height: 290px;
   padding: 3.1rem 3rem 2.6rem;
   background:
