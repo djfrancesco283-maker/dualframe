@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>Call gratuita 15 min — DualFrame</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="luxury.css">
+
+<style>
+body{
+background:#0b0b0c;
+color:white;
+font-family:Inter,system-ui;
+padding:40px;
+max-width:800px;
+margin:auto;
+}
+
+h1{
+font-size:40px;
+margin-bottom:10px;
+}
+
+p{
+opacity:.8;
+}
+
+form{
+margin-top:30px;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+input,textarea,select{
+padding:12px;
+border-radius:8px;
+border:none;
+background:#111;
+color:white;
+}
+
+button{
+padding:14px;
+background:white;
+color:black;
+border:none;
+border-radius:10px;
+font-weight:bold;
+cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Call gratuita di 15 minuti</h1>
+
+<p>
+Raccontaci cosa vuoi migliorare nel tuo brand o nel tuo marketing.
+Ti risponderemo entro 24 ore per fissare una call.
+</p>
+
+<form action="https://formspree.io/f/xkoqwvgp" method="POST">
+
+<input type="hidden" name="_subject" value="Nuovo lead DualFrame">
+
+<input type="text" name="nome" placeholder="Nome e cognome" required>
+
+<input type="text" name="azienda" placeholder="Azienda / Brand">
+
+<input type="email" name="email" placeholder="Email" required>
+
+<textarea name="obiettivo" placeholder="Cosa vuoi migliorare?" required></textarea>
+
+<select name="budget">
+<option value="">Budget indicativo</option>
+<option value="500-1000">500–1000€</option>
+<option value="1000-2500">1000–2500€</option>
+<option value="2500-5000">2500–5000€</option>
+<option value="5000+">5000€+</option>
+</select>
+
+<button type="submit">Richiedi la call</button>
+
+</form>
+
+</body>
+</html>
