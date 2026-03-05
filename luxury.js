@@ -90,4 +90,37 @@
       });
     });
   }
+
+  // Luxury scroll-in for cards/items (visible on mobile too).
+  if (!reduceMotion) {
+    const luxeTargets = document.querySelectorAll(
+      ".service-card, .pricing-card, .team-card, .work-item"
+    );
+
+    luxeTargets.forEach((el) => el.classList.add("lux-ready"));
+
+    const luxeObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const siblings = Array.from(entry.target.parentElement.children);
+          const idx = Math.max(0, siblings.indexOf(entry.target));
+          const delay = Math.min(340, idx * 70);
+
+          setTimeout(() => {
+            entry.target.classList.add("lux-visible");
+            entry.target.classList.remove("lux-ready");
+          }, delay);
+
+          luxeObserver.unobserve(entry.target);
+        });
+      },
+      {
+        threshold: 0.12,
+        rootMargin: "0px 0px -40px 0px",
+      }
+    );
+
+    luxeTargets.forEach((el) => luxeObserver.observe(el));
+  }
 })();
