@@ -1,0 +1,165 @@
+/* Luxury motion layer for index_codex only */
+
+:root {
+  --lux-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Hero cinematic reveal */
+#hero .hero-tag,
+#hero .hero-sub,
+#hero .hero-cta {
+  will-change: transform, opacity, filter;
+}
+
+#hero .hero-title {
+  will-change: transform, opacity, filter;
+}
+
+#hero .hero-title .outline-text {
+  display: block;
+  will-change: transform, opacity, filter;
+}
+
+#hero .hero-title.reveal.visible {
+  animation: lux-title-in 1200ms var(--lux-ease) 80ms both;
+}
+
+#hero .hero-title.reveal.visible .outline-text {
+  animation: lux-line-in 1200ms var(--lux-ease) 250ms both;
+}
+
+#hero .hero-tag.reveal.visible {
+  animation: lux-fade-up 900ms var(--lux-ease) both;
+}
+
+#hero .hero-sub.reveal.visible {
+  animation: lux-fade-up 1100ms var(--lux-ease) 180ms both;
+}
+
+#hero .hero-cta.reveal.visible {
+  animation: lux-fade-up 1200ms var(--lux-ease) 320ms both;
+}
+
+@keyframes lux-title-in {
+  from {
+    opacity: 0;
+    transform: translateY(28px) scale(0.985);
+    filter: blur(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes lux-line-in {
+  from {
+    opacity: 0;
+    transform: translateY(34px);
+    filter: blur(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes lux-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+/* Hero parallax hooks */
+#hero {
+  --mx: 0px;
+  --my: 0px;
+  --sy: 0px;
+}
+
+#hero .hero-logomark {
+  transform: translate3d(
+      calc(var(--mx) * 0.35),
+      calc(-50% + (var(--my) * 0.2) - (var(--sy) * 0.08)),
+      0
+    );
+}
+
+#hero .glow-orange {
+  transform: translate3d(
+      calc(var(--mx) * 0.5),
+      calc(var(--my) * 0.3 - (var(--sy) * 0.05)),
+      0
+    );
+}
+
+#hero .glow-teal {
+  transform: translate3d(
+      calc(var(--mx) * -0.35),
+      calc(var(--my) * -0.2 + (var(--sy) * 0.03)),
+      0
+    );
+}
+
+/* Magnetic hover cards */
+.service-card,
+.pricing-card,
+.team-card {
+  transform: translate3d(0, 0, 0);
+  transition: box-shadow 0.45s var(--lux-ease), border-color 0.45s var(--lux-ease);
+  will-change: transform;
+}
+
+.service-card:hover,
+.pricing-card:hover,
+.team-card:hover {
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.25);
+}
+
+.service-card::after,
+.pricing-card::after,
+.team-card::after {
+  content: "";
+  position: absolute;
+  inset: -40% -50%;
+  background: linear-gradient(
+    105deg,
+    transparent 35%,
+    rgba(255, 255, 255, 0.055) 50%,
+    transparent 65%
+  );
+  transform: translateX(-120%);
+  transition: transform 900ms var(--lux-ease);
+  pointer-events: none;
+}
+
+.service-card:hover::after,
+.pricing-card:hover::after,
+.team-card:hover::after {
+  transform: translateX(120%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #hero .hero-title.reveal.visible,
+  #hero .hero-title.reveal.visible .outline-text,
+  #hero .hero-tag.reveal.visible,
+  #hero .hero-sub.reveal.visible,
+  #hero .hero-cta.reveal.visible {
+    animation: none !important;
+  }
+
+  .service-card,
+  .pricing-card,
+  .team-card {
+    transform: none !important;
+  }
+}
