@@ -995,8 +995,8 @@ footer {
 }
 .team-avatar {
   flex-shrink: 0;
-  width: 56px;
-  height: 56px;
+  width: 72px;
+  height: 72px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--accent-2), var(--teal));
   display: flex;
@@ -1006,6 +1006,13 @@ footer {
   font-size: 1.2rem;
   font-weight: 800;
   color: var(--white);
+  overflow: hidden;
+}
+.team-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
 }
 .team-info h3 {
   font-size: 1.1rem;
