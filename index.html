@@ -29,12 +29,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="luxury.css" />
 </head>
 <body>
 
   <!-- NAV -->
   <nav id="navbar">
-    <a href="#" class="logo">
+    <a href="#hero" class="logo">
       <img src="assets/img/logo.png" alt="Dualframe Brand Agency" class="logo-img" />
     </a>
     <div class="nav-links">
@@ -44,7 +45,7 @@
       <a href="#about">About</a>
       <a href="#contact" class="btn-nav">Contattaci</a>
     </div>
-    <button class="hamburger" id="hamburger" aria-label="Menu">
+    <button class="hamburger" id="hamburger" type="button" aria-label="Apri menu" aria-controls="mobileMenu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </nav>
@@ -126,30 +127,30 @@
         <h2>Servizi</h2>
       </div>
       <div class="services-grid">
-        <div class="service-card reveal">
+        <a href="service-brand-identity.html" class="service-card reveal" aria-label="Apri dettagli servizio Brand Identity">
           <div class="service-num">01</div>
           <h3>Brand Identity</h3>
           <p>Costruiamo identità distintive e non banali, al passo con i trend e con un tocco di innovazione. Logo, palette, tipografia e sistema visivo completo.</p>
           <div class="service-arrow">→</div>
-        </div>
-        <div class="service-card reveal">
+        </a>
+        <a href="service-marketing.html" class="service-card reveal" aria-label="Apri dettagli servizio Marketing">
           <div class="service-num">02</div>
           <h3>Marketing</h3>
           <p>Siamo pronti a studiare per il tuo brand strategie vincenti e pragmatiche. Ti aiuteremo ad emergere e ad essere visibile dove conta.</p>
           <div class="service-arrow">→</div>
-        </div>
-        <div class="service-card reveal">
+        </a>
+        <a href="service-innovation.html" class="service-card reveal" aria-label="Apri dettagli servizio Innovation">
           <div class="service-num">03</div>
           <h3>Innovation</h3>
           <p>Non ci fermiamo all'estetica. Cerchiamo idee sempre nuove e uniche affinché il tuo brand sia inimitabile. Non ci interessa se è solo bello — ci interessa se ti fa guadagnare.</p>
           <div class="service-arrow">→</div>
-        </div>
-        <div class="service-card reveal">
+        </a>
+        <a href="service-motion-design.html" class="service-card reveal" aria-label="Apri dettagli servizio Motion Design">
           <div class="service-num">04</div>
           <h3>Motion Design</h3>
           <p>Diamo movimento alla tua identità. Animazioni, video logo e contenuti motion per comunicare con impatto su tutti i canali digitali.</p>
           <div class="service-arrow">→</div>
-        </div>
+        </a>
       </div>
     </div>
   </section>
@@ -355,15 +356,17 @@
         <span class="section-tag">Contatti</span>
         <h2>Vuoi dare forma<br />alla tua identità?</h2>
         <p>Hai un progetto in mente? Parliamone.<br />Siamo sempre alla ricerca di sfide interessanti.</p>
-        <form class="contact-form" id="contactForm">
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/xkoqwvgp" method="POST">
+          <input type="hidden" name="_subject" value="Nuovo contatto dal sito Dualframe" />
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
           <div class="form-row">
             <div class="form-group">
               <label for="name">Nome</label>
-              <input type="text" id="name" name="name" placeholder="Il tuo nome" required />
+              <input type="text" id="name" name="name" placeholder="Il tuo nome" autocomplete="name" required />
             </div>
             <div class="form-group">
               <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="tua@email.com" required />
+              <input type="email" id="email" name="email" placeholder="tua@email.com" autocomplete="email" required />
             </div>
           </div>
           <div class="form-group">
@@ -402,7 +405,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="#" class="logo">
+          <a href="#hero" class="logo">
             <img src="assets/img/logo.png" alt="Dualframe Brand Agency" class="logo-img" />
           </a>
           <p>Brand Design &<br />Vision Communication.</p>
@@ -435,6 +438,7 @@
   </footer>
 
   <script src="script.js"></script>
+  <script src="luxury.js"></script>
 
   <script type="application/ld+json">
   {
