@@ -73,6 +73,32 @@
     </div>
   </div>
 
+
+  <!-- GALLERY -->
+  <div class="project-gallery container">
+    <h4>Galleria</h4>
+    <div class="gallery-grid">
+      <img src="assets/img/projects/forloox.jpg" alt="forloox cover" onclick="openLightbox(this.src)" />
+      <img src="assets/img/projects/forloox-detail.jpg" alt="forloox detail" onclick="openLightbox(this.src)" />
+    </div>
+  </div>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <img id="lightbox-img" src="" alt="" />
+  </div>
+
+  <script>
+    function openLightbox(src) {{
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').classList.add('open');
+    }}
+    function closeLightbox() {{
+      document.getElementById('lightbox').classList.remove('open');
+    }}
+    document.addEventListener('keydown', e => {{ if (e.key === 'Escape') closeLightbox(); }});
+  </script>
   <!-- CTA -->
   <div class="project-cta">
     <p>Vuoi un'identità così per il tuo brand?</p>
