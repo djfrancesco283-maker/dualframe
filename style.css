@@ -943,7 +943,7 @@ footer {
   font-weight: 600;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--text-dim);
+  color: var(--accent-2) !important;
   margin-bottom: 0.4rem;
 }
 
