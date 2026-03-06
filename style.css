@@ -2,6 +2,83 @@
    DUALFRAME — Dark Minimalist Brand Agency
    ============================================ */
 
+/* ============================================
+   CUSTOM CURSOR
+   ============================================ */
+
+/* Nasconde il cursore di sistema su dispositivi con mouse */
+@media (pointer: fine) {
+  *, *::before, *::after { cursor: none !important; }
+}
+
+/* Base — entrambi gli elementi partono in top-left (0,0)
+   e vengono spostati via JS con translate(x, y).
+   Il margine negativo centra l'elemento sul punto del cursore. */
+.c-dot,
+.c-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99999;
+  will-change: transform;
+}
+
+/* ── Dot ── piccolo, segue istantaneamente */
+.c-dot {
+  width: 4px;
+  height: 4px;
+  margin: -2px 0 0 -2px;
+  background: #ffffff;
+  transition: opacity 0.25s;
+}
+
+/* ── Ring ── grande, segue con ritardo (lerp via JS)
+   CSS gestisce solo dimensione, colore e opacità */
+.c-ring {
+  width: 28px;
+  height: 28px;
+  margin: -14px 0 0 -14px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition:
+    width  0.45s cubic-bezier(0.25, 0.1, 0.25, 1),
+    height 0.45s cubic-bezier(0.25, 0.1, 0.25, 1),
+    margin 0.45s cubic-bezier(0.25, 0.1, 0.25, 1),
+    border-color 0.45s ease,
+    opacity 0.25s ease;
+}
+
+/* Hover su link / bottoni */
+.c-ring.c--link {
+  width: 44px;
+  height: 44px;
+  margin: -22px 0 0 -22px;
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Hover su card progetto */
+.c-ring.c--project {
+  width: 64px;
+  height: 64px;
+  margin: -32px 0 0 -32px;
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
+/* Feedback click — ring si contrae leggermente */
+.c-ring.c--press {
+  width: 22px;
+  height: 22px;
+  margin: -11px 0 0 -11px;
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Quando il mouse esce dalla finestra */
+.c-dot.c--hidden,
+.c-ring.c--hidden {
+  opacity: 0;
+}
+
 /* Reset & Base */
 *, *::before, *::after {
   box-sizing: border-box;
