@@ -405,55 +405,88 @@
   </section>
 
   <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="#hero" class="logo">
-            <img src="assets/img/logo.png" alt="Dualframe Brand Agency" class="logo-img" loading="lazy" width="140" height="40" />
-          </a>
-          <p>Brand Design &<br />Vision Communication.</p>
-        </div>
-        <div class="footer-links">
-          <h4>Navigazione</h4>
-          <a href="#services">Servizi</a>
-          <a href="#work">Lavori</a>
-          <a href="#pricing">Pacchetti</a>
-          <a href="#about">Chi Siamo</a>
-          <a href="#contact">Contatti</a>
-        </div>
-        <div class="footer-links">
-          <h4>Social</h4>
-          <!-- Social: target="_blank" mantenuto — sono link esterni -->
-          <a href="https://www.instagram.com/dualframe__/" target="_blank" rel="noopener noreferrer">
-            <span class="footer-social-icon" aria-hidden="true">
-              <img src="assets/img/social/instagram.png" alt="" class="footer-social-png" width="24" height="24" />
-            </span>
-            <span>Instagram</span>
-          </a>
-          <a href="https://www.behance.net/dualframe22" target="_blank" rel="noopener noreferrer">
-            <span class="footer-social-icon" aria-hidden="true">
-              <img src="assets/img/social/behance.png" alt="" class="footer-social-png" width="24" height="24" />
-            </span>
-            <span>Behance</span>
-          </a>
-          <a href="https://it.pinterest.com/dualframe__/" target="_blank" rel="noopener noreferrer">
-            <span class="footer-social-icon" aria-hidden="true">
-              <img src="assets/img/social/pinterest.png" alt="" class="footer-social-png" width="24" height="24" />
-            </span>
-            <span>Pinterest</span>
-          </a>
-        </div>
-        <div class="footer-contact">
-          <h4>Contatti</h4>
-          <a href="mailto:info@dualframe.it">info@dualframe.it</a>
-          <a href="tel:+393341831985">334 1831985</a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© 2026 Dualframe. Tutti i diritti riservati.</p>
-        <p>La prima impressione decide tutto.</p>
+
+    <!-- ── Statement ── -->
+    <div class="footer-statement">
+      <div class="container">
+        <span class="footer-eyebrow">Prossimo passo</span>
+        <h2 class="footer-headline">Il brand giusto<br>non si nota.<br>Si ricorda.</h2>
+        <a href="#contact" class="footer-cta">
+          Parliamo del tuo progetto
+          <svg class="footer-cta-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
       </div>
     </div>
+
+    <!-- ── Corpo ── -->
+    <div class="footer-body">
+      <div class="container">
+        <div class="footer-grid">
+
+          <!-- Brand -->
+          <div class="footer-brand">
+            <a href="#hero" class="footer-brand-link" aria-label="Dualframe — torna in cima">
+              <img src="assets/img/logo.png" alt="Dualframe Brand Agency" class="footer-logo-img" loading="lazy" width="140" height="40" />
+            </a>
+            <p class="footer-tagline">Brand Design &<br>Vision Communication.</p>
+          </div>
+
+          <!-- Navigazione -->
+          <nav class="footer-col" aria-label="Navigazione sito">
+            <p class="footer-col-label">Studio</p>
+            <a href="#services">Servizi</a>
+            <a href="#work">Lavori</a>
+            <a href="#pricing">Pacchetti</a>
+            <a href="#about">Chi Siamo</a>
+            <a href="#contact">Contatti</a>
+          </nav>
+
+          <!-- Social -->
+          <nav class="footer-col footer-col--social" aria-label="Profili social">
+            <p class="footer-col-label">Social</p>
+            <a href="https://www.instagram.com/dualframe__/" target="_blank" rel="noopener noreferrer">
+              <span class="footer-social-icon" aria-hidden="true">
+                <img src="assets/img/social/instagram.png" alt="" class="footer-social-png" width="24" height="24" />
+              </span>
+              <span>Instagram</span>
+            </a>
+            <a href="https://www.behance.net/dualframe22" target="_blank" rel="noopener noreferrer">
+              <span class="footer-social-icon" aria-hidden="true">
+                <img src="assets/img/social/behance.png" alt="" class="footer-social-png" width="24" height="24" />
+              </span>
+              <span>Behance</span>
+            </a>
+            <a href="https://it.pinterest.com/dualframe__/" target="_blank" rel="noopener noreferrer">
+              <span class="footer-social-icon" aria-hidden="true">
+                <img src="assets/img/social/pinterest.png" alt="" class="footer-social-png" width="24" height="24" />
+              </span>
+              <span>Pinterest</span>
+            </a>
+          </nav>
+
+          <!-- Contatti -->
+          <div class="footer-col footer-col--contact">
+            <p class="footer-col-label">Contatti</p>
+            <a href="mailto:info@dualframe.it" class="footer-contact-link">info@dualframe.it</a>
+            <a href="tel:+393341831985" class="footer-contact-link">334 1831985</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Bottom ── -->
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom-inner">
+          <span class="footer-copy">© 2026 Dualframe. Tutti i diritti riservati.</span>
+          <span class="footer-manifesto">La prima impressione decide tutto.</span>
+        </div>
+      </div>
+    </div>
+
   </footer>
 
   <!-- FIX: aggiunto defer per non bloccare il rendering -->

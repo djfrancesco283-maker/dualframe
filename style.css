@@ -824,72 +824,153 @@ section {
 }
 
 /* ============================================
-   FOOTER
+   FOOTER — PREMIUM REDESIGN
    ============================================ */
+
 footer {
-  background: var(--bg-2);
+  background: var(--bg);
   border-top: 1px solid var(--border);
-  padding: 5rem 0 2rem;
+}
+
+/* ── Statement ── */
+.footer-statement {
+  padding: 8rem 0 7rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.footer-eyebrow {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 2rem;
+}
+
+.footer-headline {
+  font-family: var(--font-display);
+  font-size: clamp(2.6rem, 5.5vw, 5rem);
+  font-weight: 800;
+  line-height: 1.0;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  margin-bottom: 3rem;
+  max-width: 14ch;
+}
+
+.footer-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  color: var(--text-muted);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 0.25rem;
+  transition: color var(--transition), border-color var(--transition), gap var(--transition);
+}
+
+.footer-cta:hover {
+  color: var(--white);
+  border-color: rgba(255, 255, 255, 0.35);
+  gap: 1rem;
+}
+
+.footer-cta-arrow {
+  flex-shrink: 0;
+  transition: transform var(--transition);
+}
+
+.footer-cta:hover .footer-cta-arrow {
+  transform: translateX(3px);
+}
+
+/* ── Corpo ── */
+.footer-body {
+  padding: 5rem 0;
+  border-bottom: 1px solid var(--border);
 }
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+  grid-template-columns: 2fr 1fr 1fr 1.4fr;
   gap: 4rem;
-  padding-bottom: 4rem;
-  border-bottom: 1px solid var(--border);
-  margin-bottom: 2rem;
+  align-items: start;
 }
 
-.footer-brand .logo-img {
+/* ── Brand ── */
+.footer-brand-link {
+  display: inline-block;
+  line-height: 0;
+}
+
+.footer-logo-img {
   height: 140px;
+  width: auto;
+  filter: invert(1);
   margin: -42px -28px;
+  opacity: 0.85;
+  transition: opacity var(--transition);
 }
 
-.footer-brand p {
-  font-size: 0.85rem;
+.footer-brand-link:hover .footer-logo-img {
+  opacity: 1;
+}
+
+.footer-tagline {
+  font-size: 0.8rem;
   color: var(--text-dim);
-  margin-top: 1.25rem;
-  line-height: 1.8;
+  line-height: 1.9;
+  margin-top: 1.5rem;
+  letter-spacing: 0.01em;
 }
 
-.footer-links {
+/* ── Colonne ── */
+.footer-col {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.8rem;
 }
 
-.footer-links h4,
-.footer-contact h4 {
+.footer-col-label {
   font-family: var(--font-body);
-  font-size: 0.7rem;
-  font-weight: 500;
-  letter-spacing: 0.15em;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--text-dim);
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.4rem;
 }
 
-.footer-links a {
+.footer-col a {
+  font-size: 0.87rem;
+  font-weight: 300;
+  color: var(--text-muted);
+  text-decoration: none;
+  letter-spacing: 0.01em;
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
-  font-size: 0.9rem;
-  color: var(--text-muted);
+  gap: 0.65rem;
+  transition: color var(--transition);
 }
 
-.footer-links a:hover {
+.footer-col a:hover {
   color: var(--white);
 }
 
+/* ── Social icons ── */
 .footer-social-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 1.05rem;
-  height: 1.05rem;
-  flex: 0 0 1.05rem;
-  overflow: visible;
+  width: 1rem;
+  height: 1rem;
+  flex: 0 0 1rem;
   transition: transform var(--transition);
 }
 
@@ -898,43 +979,58 @@ footer {
   height: 100%;
   display: block;
   object-fit: contain;
-  object-position: center;
-  filter: brightness(0) invert(0.72) !important;
-  opacity: 0.96;
-  transition: filter var(--transition), opacity var(--transition);
+  filter: brightness(0) invert(0.5);
+  transition: filter var(--transition);
 }
 
-.footer-links a:hover .footer-social-icon {
+.footer-col--social a:hover .footer-social-icon {
   transform: translateY(-1px);
 }
 
-.footer-links a:hover .footer-social-png {
-  filter: brightness(0) invert(1) !important;
-  opacity: 1;
+.footer-col--social a:hover .footer-social-png {
+  filter: brightness(0) invert(1);
 }
 
-.footer-contact {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.footer-contact a,
-.footer-contact p {
-  font-size: 0.85rem;
+/* ── Contatti ── */
+.footer-contact-link {
+  font-size: 0.88rem;
+  font-weight: 300;
   color: var(--text-muted);
+  text-decoration: none;
+  letter-spacing: 0.01em;
+  display: block;
+  transition: color var(--transition);
 }
 
-.footer-contact a:hover {
+.footer-contact-link:hover {
   color: var(--white);
 }
 
+/* ── Bottom ── */
 .footer-bottom {
+  padding: 2rem 0;
+}
+
+.footer-bottom-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 0.75rem;
+}
+
+.footer-copy {
+  font-size: 0.7rem;
+  letter-spacing: 0.02em;
   color: var(--text-dim);
+}
+
+.footer-manifesto {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  opacity: 0.5;
 }
 
 /* ============================================
@@ -1259,7 +1355,8 @@ footer {
    RESPONSIVE
    ============================================ */
 @media (max-width: 1024px) {
-  .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .footer-statement { padding: 6rem 0 5rem; }
+  .footer-grid { grid-template-columns: 1.5fr 1fr; gap: 2.5rem; }
   .work-grid { grid-template-columns: repeat(2, 1fr); }
   .pricing-grid { grid-template-columns: 1fr; }
   .pricing-featured { transform: none; }
@@ -1292,8 +1389,10 @@ footer {
 
   .form-row { grid-template-columns: 1fr; }
 
+  .footer-statement { padding: 5rem 0 4rem; }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
   .footer-brand { grid-column: 1 / -1; }
+  .footer-col--contact { grid-column: 1 / -1; }
 
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
 
@@ -1327,9 +1426,12 @@ footer {
     width: 100%;
   }
   .container { padding: 0 1rem; }
+  .footer-statement { padding: 4rem 0 3.5rem; }
+  .footer-headline { font-size: clamp(2rem, 8vw, 2.8rem); }
   .footer-grid { grid-template-columns: 1fr; }
   .footer-brand { grid-column: auto; }
-  .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
+  .footer-col--contact { grid-column: auto; }
+  .footer-bottom-inner { flex-direction: column; gap: 0.5rem; text-align: center; }
   .about-quote blockquote { font-size: 1.3rem; padding-left: 1.25rem; }
   .pricing-card { padding: 1.75rem 1.25rem; }
   .section-header h2 { font-size: clamp(2rem, 8vw, 2.5rem); }
