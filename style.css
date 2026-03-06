@@ -898,6 +898,12 @@ footer {
   display: block;
   object-fit: contain;
   object-position: center;
+  filter: brightness(0) invert(0.72);
+  transition: filter var(--transition);
+}
+
+.footer-links a:hover .footer-social-png {
+  filter: brightness(0) invert(1);
 }
 
 .footer-contact {
