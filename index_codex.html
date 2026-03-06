@@ -8,21 +8,25 @@
   <meta name="keywords" content="brand agency, brand identity, logo design, marketing, motion design, visual design, packaging, Pescara, Italia" />
   <meta name="author" content="Dualframe" />
   <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0a0a0a" />
   <link rel="canonical" href="https://www.dualframe.it/" />
 
+  <!-- OG: sostituire logo.png con un'immagine social dedicata 1200×630 px per anteprima ottimale -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Dualframe" />
   <meta property="og:title" content="Dualframe — Brand Agency" />
   <meta property="og:description" content="Brand Identity, Marketing e Motion Design. La prima impressione decide tutto. Noi la progettiamo per te." />
   <meta property="og:url" content="https://www.dualframe.it/" />
-  <meta property="og:image" content="https://www.dualframe.it/assets/img/logo.png" />
+  <meta property="og:image" content="https://www.dualframe.it/assets/img/og-social.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="Dualframe Brand Agency" />
   <meta property="og:locale" content="it_IT" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Dualframe — Brand Agency" />
   <meta name="twitter:description" content="Brand Identity, Marketing e Motion Design. La prima impressione decide tutto." />
-  <meta name="twitter:image" content="https://www.dualframe.it/assets/img/logo.png" />
+  <meta name="twitter:image" content="https://www.dualframe.it/assets/img/og-social.jpg" />
 
   <link rel="icon" type="image/png" href="assets/img/logomark.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -30,6 +34,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="luxury.css" />
+
+  <style>
+    /* Honeypot anti-spam — nascosto via CSS, non inline */
+    .hp-field { position: absolute; left: -9999px; opacity: 0; height: 0; width: 0; overflow: hidden; }
+  </style>
 </head>
 <body>
 
@@ -123,25 +132,26 @@
         <h2>Servizi</h2>
       </div>
       <div class="services-grid">
-        <a href="service-brand-identity.html" target="_blank" rel="noopener" class="service-card reveal" aria-label="Apri dettagli servizio Brand Identity">
+        <!-- FIX: rimosso target="_blank" rel="noopener" — navigazione interna nella stessa tab -->
+        <a href="service-brand-identity.html" class="service-card reveal" aria-label="Apri dettagli servizio Brand Identity">
           <div class="service-num">01</div>
           <h3>Brand Identity</h3>
           <p>Costruiamo identità distintive e non banali, al passo con i trend e con un tocco di innovazione. Logo, palette, tipografia e sistema visivo completo.</p>
           <div class="service-arrow">→</div>
         </a>
-        <a href="service-marketing.html" target="_blank" rel="noopener" class="service-card reveal" aria-label="Apri dettagli servizio Marketing">
+        <a href="service-marketing.html" class="service-card reveal" aria-label="Apri dettagli servizio Marketing">
           <div class="service-num">02</div>
           <h3>Marketing</h3>
           <p>Siamo pronti a studiare per il tuo brand strategie vincenti e pragmatiche. Ti aiuteremo ad emergere e ad essere visibile dove conta.</p>
           <div class="service-arrow">→</div>
         </a>
-        <a href="service-innovation.html" target="_blank" rel="noopener" class="service-card reveal" aria-label="Apri dettagli servizio Innovation">
+        <a href="service-innovation.html" class="service-card reveal" aria-label="Apri dettagli servizio Innovation">
           <div class="service-num">03</div>
           <h3>Innovation</h3>
           <p>Non ci fermiamo all'estetica. Cerchiamo idee sempre nuove e uniche affinché il tuo brand sia inimitabile. Non ci interessa se è solo bello — ci interessa se ti fa guadagnare.</p>
           <div class="service-arrow">→</div>
         </a>
-        <a href="service-motion-design.html" target="_blank" rel="noopener" class="service-card reveal" aria-label="Apri dettagli servizio Motion Design">
+        <a href="service-motion-design.html" class="service-card reveal" aria-label="Apri dettagli servizio Motion Design">
           <div class="service-num">04</div>
           <h3>Motion Design</h3>
           <p>Diamo movimento alla tua identità. Animazioni, video logo e contenuti motion per comunicare con impatto su tutti i canali digitali.</p>
@@ -259,8 +269,9 @@
           ci interessa se <em>ti fa guadagnare di più.</em>"
         </blockquote>
       </div>
+      <!-- FIX: riformulato — l'esperienza decennale è dei fondatori, non dell'agenzia -->
       <p class="about-intro reveal">
-        Vantiamo un'esperienza decennale nella progettazione della comunicazione visiva. Siamo capaci di dare forma al tuo pensiero con originalità e professionalità.
+        Portiamo oltre 10 anni di esperienza nella progettazione della comunicazione visiva. Siamo capaci di dare forma al tuo pensiero con originalità e professionalità.
       </p>
       <div class="team-grid">
         <div class="team-card reveal">
@@ -297,7 +308,8 @@
       <div class="pricing-grid">
         <div class="pricing-card reveal">
           <div class="pricing-header">
-            <span class="pricing-icon">⚡</span>
+            <!-- FIX: aria-hidden sulle emoji decorative -->
+            <span class="pricing-icon" aria-hidden="true">⚡</span>
             <h3>Express</h3>
             <span class="pricing-badge">Popolare</span>
           </div>
@@ -312,7 +324,7 @@
         </div>
         <div class="pricing-card pricing-featured reveal">
           <div class="pricing-header">
-            <span class="pricing-icon">💼</span>
+            <span class="pricing-icon" aria-hidden="true">💼</span>
             <h3>Business</h3>
           </div>
           <p class="pricing-desc">Per chi vuole continuità e crescita costante</p>
@@ -325,7 +337,7 @@
         </div>
         <div class="pricing-card reveal">
           <div class="pricing-header">
-            <span class="pricing-icon">👑</span>
+            <span class="pricing-icon" aria-hidden="true">👑</span>
             <h3>Premium</h3>
           </div>
           <p class="pricing-desc">Per chi vuole il massimo in visibilità e risultati</p>
@@ -348,7 +360,8 @@
         <p>Hai un progetto in mente? Parliamone.<br />Siamo sempre alla ricerca di sfide interessanti.</p>
         <form class="contact-form" id="contactForm" action="https://formspree.io/f/xkoqwvgp" method="POST">
           <input type="hidden" name="_subject" value="Nuovo contatto dal sito Dualframe" />
-          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+          <!-- FIX: honeypot spostato su classe CSS, aggiunto aria-hidden -->
+          <input type="text" name="_gotcha" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true" />
           <div class="form-row">
             <div class="form-group">
               <label for="name">Nome</label>
@@ -379,11 +392,12 @@
           <button type="submit" class="btn-primary btn-submit">Invia messaggio →</button>
         </form>
         <div class="contact-direct">
+          <!-- FIX: aria-hidden sulle emoji decorative nei contatti -->
           <a href="mailto:info@dualframe.it" class="contact-link">
-            <span>✉</span> info@dualframe.it
+            <span aria-hidden="true">✉</span> info@dualframe.it
           </a>
           <a href="tel:+393341831985" class="contact-link">
-            <span>📞</span> 334 1831985
+            <span aria-hidden="true">📞</span> 334 1831985
           </a>
         </div>
       </div>
@@ -409,6 +423,7 @@
         </div>
         <div class="footer-links">
           <h4>Social</h4>
+          <!-- Social: target="_blank" mantenuto — sono link esterni -->
           <a href="https://www.instagram.com/dualframe__/" target="_blank" rel="noopener noreferrer">
             <span class="footer-social-icon" aria-hidden="true">
               <img src="assets/img/social/instagram.png" alt="" class="footer-social-png" width="24" height="24" />
@@ -441,8 +456,9 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
-  <script src="luxury.js"></script>
+  <!-- FIX: aggiunto defer per non bloccare il rendering -->
+  <script src="script.js" defer></script>
+  <script src="luxury.js" defer></script>
 
   <script type="application/ld+json">
   {
