@@ -885,10 +885,10 @@ footer {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 1.7rem;
-  height: 1.7rem;
-  flex: 0 0 1.7rem;
-  padding: 0.18rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  flex: 0 0 1.4rem;
+  padding: 0.12rem;
   border-radius: 6px;
   overflow: hidden;
   background: rgba(255, 255, 255, 0.88);
