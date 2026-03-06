@@ -924,7 +924,7 @@ footer {
 
 .footer-tagline {
   font-size: 0.8rem;
-  color: var(--text-dim);
+  color: var(--teal);
   line-height: 1.9;
   margin-top: 1.5rem;
   letter-spacing: 0.01em;
