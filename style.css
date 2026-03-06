@@ -223,6 +223,7 @@ a {
   top: 50%;
   transform: translateY(-50%);
   width: 55vw;
+  height: auto;
   max-width: 700px;
   opacity: 0.04;
   filter: invert(1);
