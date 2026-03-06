@@ -1270,12 +1270,14 @@ footer {
 @media (max-width: 480px) {
   .hero-content { padding: 96px 1rem 56px; }
   .hero-title {
-    font-size: clamp(2rem, 10vw, 3rem);
-    line-height: 1;
+    font-size: clamp(1.8rem, 8.8vw, 2.8rem);
+    line-height: 0.98;
     letter-spacing: -0.02em;
-    word-break: break-word;
+    word-break: normal;
+    overflow-wrap: normal;
   }
-  .hero-title br { display: none; }
+  .hero-title-line { display: block; }
+  .hero-title br { display: block; }
   .outline-text { display: block; }
   .hero-sub { font-size: 0.95rem; max-width: 100%; }
   .hero-tag { font-size: 0.65rem; }
