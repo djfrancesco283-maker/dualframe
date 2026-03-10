@@ -1247,7 +1247,8 @@ footer {
 .pricing-header h3 {
   font-size: 1.8rem;
   color: var(--white);
-  line-height: 1;
+  line-height: 1.2;
+  min-height: 2.2rem;
 }
 .pricing-badge {
   align-self: flex-start;
