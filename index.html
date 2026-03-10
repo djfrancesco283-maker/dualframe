@@ -41,8 +41,10 @@
   </style>
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Vai al contenuto principale</a>
 
-  <nav id="navbar">
+  <header>
+  <nav id="navbar" aria-label="Navigazione principale">
     <a href="#hero" class="logo">
       <img src="assets/img/logo.png" alt="Dualframe Brand Agency" class="logo-img" width="140" height="40" />
     </a>
@@ -57,6 +59,9 @@
       <span></span><span></span><span></span>
     </button>
   </nav>
+  </header>
+
+  <main id="main-content">
 
   <div class="mobile-menu" id="mobileMenu">
     <a href="#services" class="mobile-link">Servizi</a>
@@ -66,7 +71,7 @@
     <a href="#contact" class="mobile-link">Contattaci</a>
   </div>
 
-  <section id="hero">
+  <section id="hero" aria-label="Hero">
     <div class="hero-bg">
       <div class="grid-overlay"></div>
       <div class="hero-glow glow-orange"></div>
@@ -125,7 +130,7 @@
     </div>
   </div>
 
-  <section id="services">
+  <section id="services" aria-label="Servizi">
     <div class="container">
       <div class="section-header reveal">
         <span class="section-tag">Di cosa ci occupiamo</span>
@@ -161,7 +166,7 @@
     </div>
   </section>
 
-  <section id="work">
+  <section id="work" aria-label="Portfolio lavori">
     <div class="container">
       <div class="section-header reveal">
         <span class="section-tag">Portfolio</span>
@@ -257,7 +262,7 @@
     </div>
   </section>
 
-  <section id="about">
+  <section id="about" aria-label="Chi siamo">
     <div class="container">
       <div class="section-header reveal">
         <span class="section-tag">Chi siamo</span>
@@ -298,7 +303,7 @@
     </div>
   </section>
 
-  <section id="pricing">
+  <section id="pricing" aria-label="Pacchetti e prezzi">
     <div class="container">
       <div class="section-header reveal">
         <span class="section-tag">Perché restare invisibile?</span>
@@ -358,7 +363,7 @@
     </div>
   </section>
 
-  <section id="contact">
+  <section id="contact" aria-label="Contatti">
     <div class="container">
       <div class="contact-inner reveal">
         <span class="section-tag">Contatti</span>
@@ -409,6 +414,8 @@
       </div>
     </div>
   </section>
+
+  </main>
 
   <footer>
 
