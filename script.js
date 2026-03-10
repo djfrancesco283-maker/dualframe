@@ -143,6 +143,17 @@ if (form) {
   });
 }
 
+// ─── Package CTA — pre-fill form ──────────────
+document.querySelectorAll('.package-cta').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    const packageType = btn.dataset.package;
+    const serviceSelect = document.getElementById('service');
+    if (serviceSelect && packageType) {
+      serviceSelect.value = packageType;
+    }
+  });
+});
+
 // ─── Smooth section links ─────────────────────
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', (e) => {
