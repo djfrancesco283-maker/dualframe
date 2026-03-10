@@ -3,422 +3,487 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dualframe — Brand Agency</title>
-  <meta name="description" content="Dualframe è una brand agency specializzata in Brand Identity, Marketing e Motion Design. La prima impressione decide tutto. Noi la progettiamo per te." />
-  <meta name="keywords" content="brand agency, brand identity, logo design, marketing, motion design, visual design, packaging, Pescara, Italia" />
+  <title>Dualframe — Studio di Brand Identity, Marketing e Motion Design</title>
+  <meta name="description" content="Dualframe progetta identità di brand che aumentano valore percepito, memorabilità e impatto commerciale. Brand Identity, Marketing e Motion Design a Pescara." />
+  <meta name="keywords" content="brand identity, brand agency, logo design, marketing strategico, motion design, visual identity, packaging, Pescara, Italia" />
   <meta name="author" content="Dualframe" />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#0a0a0a" />
   <link rel="canonical" href="https://www.dualframe.it/" />
 
-  <!-- OG: sostituire logo.png con un'immagine social dedicata 1200×630 px per anteprima ottimale -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Dualframe" />
-  <meta property="og:title" content="Dualframe — Brand Agency" />
-  <meta property="og:description" content="Brand Identity, Marketing e Motion Design. La prima impressione decide tutto. Noi la progettiamo per te." />
+  <meta property="og:title" content="Dualframe — Studio di Brand Identity e Visual Design" />
+  <meta property="og:description" content="Progettiamo identità di brand che aumentano valore percepito, memorabilità e impatto commerciale. Pescara, Italia." />
   <meta property="og:url" content="https://www.dualframe.it/" />
   <meta property="og:image" content="https://www.dualframe.it/assets/img/og-social.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Dualframe Brand Agency" />
+  <meta property="og:image:alt" content="Dualframe — Studio di Brand Identity" />
   <meta property="og:locale" content="it_IT" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Dualframe — Brand Agency" />
-  <meta name="twitter:description" content="Brand Identity, Marketing e Motion Design. La prima impressione decide tutto." />
+  <meta name="twitter:title" content="Dualframe — Studio di Brand Identity e Visual Design" />
+  <meta name="twitter:description" content="Progettiamo identità di brand che aumentano valore percepito e impatto commerciale." />
   <meta name="twitter:image" content="https://www.dualframe.it/assets/img/og-social.jpg" />
 
   <link rel="icon" type="image/png" href="assets/img/logomark.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@700;800&family=Space+Grotesk:wght@600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="luxury.css" />
 
   <style>
-    /* Honeypot anti-spam — nascosto via CSS, non inline */
     .hp-field { position: absolute; left: -9999px; opacity: 0; height: 0; width: 0; overflow: hidden; }
   </style>
 </head>
 <body>
 
-  <nav id="navbar">
-    <a href="#hero" class="logo">
-      <img src="assets/img/logo.png" alt="Dualframe Brand Agency" class="logo-img" width="140" height="40" />
-    </a>
-    <div class="nav-links">
-      <a href="#services">Servizi</a>
-      <a href="#work">Lavori</a>
-      <a href="#pricing">Pacchetti</a>
-      <a href="#about">Chi Siamo</a>
-      <a href="#contact" class="btn-nav">Contattaci</a>
-    </div>
-    <button class="hamburger" id="hamburger" type="button" aria-label="Apri menu" aria-controls="mobileMenu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
+  <a href="#main-content" class="skip-link">Vai al contenuto principale</a>
 
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="#services" class="mobile-link">Servizi</a>
-    <a href="#work" class="mobile-link">Lavori</a>
-    <a href="#pricing" class="mobile-link">Pacchetti</a>
-    <a href="#about" class="mobile-link">Chi Siamo</a>
-    <a href="#contact" class="mobile-link">Contattaci</a>
+  <header>
+    <nav id="navbar" aria-label="Navigazione principale">
+      <a href="#hero" class="logo">
+        <img src="assets/img/logo.png" alt="Dualframe" class="logo-img" width="140" height="40" />
+      </a>
+      <div class="nav-links">
+        <a href="#services">Servizi</a>
+        <a href="#work">Lavori</a>
+        <a href="#solutions">Soluzioni</a>
+        <a href="#about">Chi Siamo</a>
+        <a href="#contact" class="btn-nav">Parliamo</a>
+      </div>
+      <button class="hamburger" id="hamburger" type="button" aria-label="Apri menu" aria-controls="mobileMenu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Menu di navigazione">
+    <nav aria-label="Navigazione mobile">
+      <a href="#services" class="mobile-link">Servizi</a>
+      <a href="#work" class="mobile-link">Lavori</a>
+      <a href="#solutions" class="mobile-link">Soluzioni</a>
+      <a href="#about" class="mobile-link">Chi Siamo</a>
+      <a href="#contact" class="mobile-link">Parliamo</a>
+    </nav>
   </div>
 
-  <section id="hero">
-    <div class="hero-bg">
-      <div class="grid-overlay"></div>
-      <div class="hero-glow glow-orange"></div>
-      <div class="hero-glow glow-teal"></div>
-      <!-- Logomark decorativo: eager perché above-the-fold -->
-      <img src="assets/img/logomark.png" alt="" class="hero-logomark" aria-hidden="true" width="600" height="600" />
-    </div>
-    <div class="hero-content">
-      <div class="hero-tag reveal">Brand Agency</div>
-      <h1 class="hero-title reveal">
-        La prima <span class="hero-title-line">impressione</span><br />
-        <span class="outline-text">decide tutto.</span>
-      </h1>
-      <p class="hero-sub reveal">
-        Noi la progettiamo per te.<br />
-        Brand Identity, Marketing e Motion Design<br />
-        per chi vuole essere ricordato.
-      </p>
-      <div class="hero-cta reveal">
-        <a href="#work" class="btn-primary">Scopri i lavori</a>
-        <a href="#contact" class="btn-ghost">Parlaci del tuo progetto →</a>
+  <main id="main-content">
+
+    <section id="hero">
+      <div class="hero-bg">
+        <div class="grid-overlay"></div>
+        <div class="hero-glow glow-orange"></div>
+        <div class="hero-glow glow-teal"></div>
+        <img src="assets/img/logomark.png" alt="" class="hero-logomark" aria-hidden="true" width="600" height="600" fetchpriority="high" />
       </div>
-    </div>
-    <div class="hero-scroll">
-      <span>scroll</span>
-      <div class="scroll-line"></div>
-    </div>
-  </section>
-
-  <div class="marquee-wrap">
-    <div class="marquee-track">
-      <span>Brand Identity</span>
-      <span class="dot">·</span>
-      <span>Visual Design</span>
-      <span class="dot">·</span>
-      <span>Marketing Strategy</span>
-      <span class="dot">·</span>
-      <span>Motion Design</span>
-      <span class="dot">·</span>
-      <span>Copywriting</span>
-      <span class="dot">·</span>
-      <span>Logo Design</span>
-      <span class="dot">·</span>
-      <span>Brand Identity</span>
-      <span class="dot">·</span>
-      <span>Visual Design</span>
-      <span class="dot">·</span>
-      <span>Marketing Strategy</span>
-      <span class="dot">·</span>
-      <span>Motion Design</span>
-      <span class="dot">·</span>
-      <span>Copywriting</span>
-      <span class="dot">·</span>
-      <span>Logo Design</span>
-      <span class="dot">·</span>
-    </div>
-  </div>
-
-  <section id="services">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">Di cosa ci occupiamo</span>
-        <h2>Servizi</h2>
-      </div>
-      <div class="services-grid">
-        <!-- FIX: rimosso target="_blank" rel="noopener" — navigazione interna nella stessa tab -->
-        <a href="service-brand-identity.html" class="service-card reveal" aria-label="Apri dettagli servizio Brand Identity">
-          <div class="service-num">01</div>
-          <h3>Brand Identity</h3>
-          <p>Costruiamo identità distintive e non banali, al passo con i trend e con un tocco di innovazione. Logo, palette, tipografia e sistema visivo completo.</p>
-          <div class="service-arrow">→</div>
-        </a>
-        <a href="service-marketing.html" class="service-card reveal" aria-label="Apri dettagli servizio Marketing">
-          <div class="service-num">02</div>
-          <h3>Marketing</h3>
-          <p>Siamo pronti a studiare per il tuo brand strategie vincenti e pragmatiche. Ti aiuteremo ad emergere e ad essere visibile dove conta.</p>
-          <div class="service-arrow">→</div>
-        </a>
-        <a href="service-innovation.html" class="service-card reveal" aria-label="Apri dettagli servizio Innovation">
-          <div class="service-num">03</div>
-          <h3>Innovation</h3>
-          <p>Non ci fermiamo all'estetica. Cerchiamo idee sempre nuove e uniche affinché il tuo brand sia inimitabile. Non ci interessa se è solo bello — ci interessa se ti fa guadagnare.</p>
-          <div class="service-arrow">→</div>
-        </a>
-        <a href="service-motion-design.html" class="service-card reveal" aria-label="Apri dettagli servizio Motion Design">
-          <div class="service-num">04</div>
-          <h3>Motion Design</h3>
-          <p>Diamo movimento alla tua identità. Animazioni, video logo e contenuti motion per comunicare con impatto su tutti i canali digitali.</p>
-          <div class="service-arrow">→</div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section id="work">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">Portfolio</span>
-        <h2>Lavori selezionati</h2>
-      </div>
-      <div class="work-grid">
-
-        <a href="forloox.html" class="work-item reveal">
-          <div class="work-img">
-            <img src="assets/img/projects/forloox.jpg" alt="Forloox — Brand Identity per Barberini Ottica, Pescara" class="work-cover" loading="lazy" width="600" height="400" />
-            <div class="work-overlay"><span class="work-view">Vedi progetto →</span></div>
-            <div class="work-shape" style="background: #fe4338;"></div>
-            <div class="work-label">FORLOOX</div>
-          </div>
-          <div class="work-info">
-            <div class="work-tags"><span>Brand Identity</span><span>E-commerce</span></div>
-            <h3>Forloox</h3>
-            <p class="work-client">Barberini Ottica — Pescara</p>
-          </div>
-        </a>
-
-        <a href="il-boscaiolo.html" class="work-item reveal">
-          <div class="work-img">
-            <img src="assets/img/projects/il-boscaiolo.jpg" alt="Il Boscaiolo — Brand Identity per ristorante tradizionale" class="work-cover" loading="lazy" width="600" height="400" />
-            <div class="work-overlay"><span class="work-view">Vedi progetto →</span></div>
-            <div class="work-shape" style="background: #926a47;"></div>
-            <div class="work-label">IL BOSCAIOLO</div>
-          </div>
-          <div class="work-info">
-            <div class="work-tags"><span>Brand Identity</span><span>Ristorazione</span></div>
-            <h3>Il Boscaiolo</h3>
-            <p class="work-client">Ristorante tradizionale</p>
-          </div>
-        </a>
-
-        <a href="trustlead.html" class="work-item reveal">
-          <div class="work-img">
-            <img src="assets/img/projects/trustlead.jpg" alt="Trustlead — Brand Identity e Motion Design per Paolo Nicolai Sport Business" class="work-cover" loading="lazy" width="600" height="400" />
-            <div class="work-overlay"><span class="work-view">Vedi progetto →</span></div>
-            <div class="work-shape" style="background: #2f3ef6;"></div>
-            <div class="work-label">TRUSTLEAD</div>
-          </div>
-          <div class="work-info">
-            <div class="work-tags"><span>Brand Identity</span><span>Motion</span></div>
-            <h3>Trustlead</h3>
-            <p class="work-client">Paolo Nicolai & Co. — Sport Business</p>
-          </div>
-        </a>
-
-        <a href="chef-citeroni.html" class="work-item reveal">
-          <div class="work-img">
-            <img src="assets/img/projects/chef-citeroni.jpg" alt="Chef Citeroni — Personal Brand per Osteria Ophis, guida Michelin 2024" class="work-cover" loading="lazy" width="600" height="400" />
-            <div class="work-overlay"><span class="work-view">Vedi progetto →</span></div>
-            <div class="work-shape" style="background: #c0392b;"></div>
-            <div class="work-label">CHEF CITERONI</div>
-          </div>
-          <div class="work-info">
-            <div class="work-tags"><span>Personal Brand</span><span>Michelin 2024</span></div>
-            <h3>Chef Citeroni</h3>
-            <p class="work-client">Osteria Ophis — Alta ristorazione</p>
-          </div>
-        </a>
-
-        <a href="dinos-bar.html" class="work-item reveal">
-          <div class="work-img">
-            <img src="assets/img/projects/dinos-bar.jpg" alt="Dino's Bar — Brand Identity e Packaging per Mixology Food & Beverage" class="work-cover" loading="lazy" width="600" height="400" />
-            <div class="work-overlay"><span class="work-view">Vedi progetto →</span></div>
-            <div class="work-shape" style="background: #e8927a;"></div>
-            <div class="work-label">DINO'S BAR</div>
-          </div>
-          <div class="work-info">
-            <div class="work-tags"><span>Brand Identity</span><span>Packaging</span></div>
-            <h3>Dino's Bar</h3>
-            <p class="work-client">Mixology — Food & Beverage</p>
-          </div>
-        </a>
-
-        <a href="ulivo-dorato.html" class="work-item reveal">
-          <div class="work-img">
-            <img src="assets/img/projects/ulivo-dorato.jpg" alt="Ulivo Dorato — Brand Identity e Packaging per olio EVO agroalimentare" class="work-cover" loading="lazy" width="600" height="400" />
-            <div class="work-overlay"><span class="work-view">Vedi progetto →</span></div>
-            <div class="work-shape" style="background: #c9a227;"></div>
-            <div class="work-label">ULIVO DORATO</div>
-          </div>
-          <div class="work-info">
-            <div class="work-tags"><span>Brand Identity</span><span>Packaging</span></div>
-            <h3>Ulivo Dorato</h3>
-            <p class="work-client">Olio EVO — Agroalimentare</p>
-          </div>
-        </a>
-
-      </div>
-    </div>
-  </section>
-
-  <section id="about">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">Chi siamo</span>
-        <h2>Due teste.<br />Un solo obiettivo.</h2>
-      </div>
-      <div class="about-quote reveal">
-        <blockquote>
-          "Non ci interessa se è solo bello,<br />
-          ci interessa se <em>ti fa guadagnare di più.</em>"
-        </blockquote>
-      </div>
-      <!-- FIX: riformulato — l'esperienza decennale è dei fondatori, non dell'agenzia -->
-      <p class="about-intro reveal">
-        Portiamo oltre 10 anni di esperienza nella progettazione della comunicazione visiva. Siamo capaci di dare forma al tuo pensiero con originalità e professionalità.
-      </p>
-      <div class="team-grid">
-        <div class="team-card reveal">
-          <div class="team-photo">
-            <img src="assets/img/yvan.jpg" alt="Yvan, Graphic & Motion Designer" loading="lazy" width="300" height="300" />
-          </div>
-          <div class="team-info">
-            <h3>Yvan</h3>
-            <span>Graphic & Motion Designer Specialist</span>
-            <p>Inizia a fare grafica a 20 anni, oggi conta un decennio di esperienza sul campo. Trasforma le idee in forme e costruisce sistemi visivi coerenti, animando le identità attraverso il motion design.</p>
-          </div>
-        </div>
-        <div class="team-card reveal">
-          <div class="team-photo">
-            <img src="assets/img/francesco.jpg" alt="Francesco, Marketing Strategist & Copywriter" loading="lazy" width="300" height="300" />
-          </div>
-          <div class="team-info">
-            <h3>Francesco</h3>
-            <span>Marketing Strategist & Copywriter</span>
-            <p>Dà voce ai brand. Definisce posizionamento, messaggi e strategie di comunicazione che portano risultati concreti e misurabili.</p>
-          </div>
+      <div class="hero-content">
+        <div class="hero-tag reveal">Brand Identity Studio</div>
+        <h1 class="hero-title reveal">
+          Il tuo brand<br />
+          <span class="outline-text">parla prima di te.</span>
+        </h1>
+        <p class="hero-sub reveal">
+          Progettiamo identità visive che aumentano<br />
+          valore percepito, riconoscibilità e margine.<br />
+          Per chi non vuole sembrare uno dei tanti.
+        </p>
+        <div class="hero-cta reveal">
+          <a href="#work" class="btn-primary">Guarda cosa facciamo</a>
+          <a href="#contact" class="btn-ghost">Richiedi una consulenza →</a>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section id="pricing">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">Perché restare invisibile?</span>
-        <h2>Soluzioni pronte<br />all'uso.</h2>
+      <div class="hero-scroll">
+        <span>scroll</span>
+        <div class="scroll-line"></div>
       </div>
-      <p class="pricing-sub reveal">Il design sbagliato ti costa più di quanto credi. Quello giusto ti fa guadagnare.<br />Ogni proposta può essere modulata e personalizzata.</p>
-      <div class="pricing-grid">
-        <div class="pricing-card reveal">
-          <div class="pricing-header" data-num="01">
-            <!-- FIX: aria-hidden sulle emoji decorative -->
-            <span class="pricing-icon" aria-hidden="true">⚡</span>
-            <h3>Express</h3>
-          </div>
-          <div class="pricing-body">
-            <p class="pricing-desc">Per chi vuole partire o rinnovarsi subito</p>
-            <ul class="pricing-list">
-              <li>Logo tipografico (1 versione + variante orizzontale/verticale)</li>
-              <li>Palette colori + Font coordinati</li>
-              <li>QR code dinamico con landing per menù PDF</li>
-              <li>Template feed Instagram — griglia 3×3 (9 post)</li>
-            </ul>
-            <a href="#contact" class="btn-pricing package-cta" data-package="express">Inizia ora →</a>
-          </div>
-        </div>
-        <div class="pricing-card pricing-featured reveal">
-          <div class="pricing-header" data-num="02">
-            <span class="pricing-icon" aria-hidden="true">💼</span>
-            <h3>Business</h3>
-            <span class="pricing-badge">Popolare</span>
-          </div>
-          <div class="pricing-body">
-            <p class="pricing-desc">Per chi vuole continuità e crescita costante</p>
-            <ul class="pricing-list">
-              <li>Creazione e Gestione Social (6 contenuti / mese)</li>
-              <li>Menù sempre aggiornato graficamente e nel contenuto</li>
-              <li>Biglietto da visita — Grafica + stampa n. 100 pz.</li>
-            </ul>
-            <a href="#contact" class="btn-pricing package-cta" data-package="business">Inizia ora →</a>
-          </div>
-        </div>
-        <div class="pricing-card reveal">
-          <div class="pricing-header" data-num="03">
-            <span class="pricing-icon" aria-hidden="true">👑</span>
-            <h3>Premium</h3>
-          </div>
-          <div class="pricing-body">
-            <p class="pricing-desc">Per chi vuole il massimo in visibilità e risultati</p>
-            <ul class="pricing-list">
-              <li>Campagna pubblicitaria</li>
-              <li>Shooting professionale (foto e video)</li>
-              <li>Gift Experience</li>
-            </ul>
-            <a href="#contact" class="btn-pricing package-cta" data-package="premium">Inizia ora →</a>
-          </div>
-        </div>
+    </section>
+
+    <div class="marquee-wrap" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Brand Identity</span>
+        <span class="dot">·</span>
+        <span>Visual Systems</span>
+        <span class="dot">·</span>
+        <span>Marketing Strategy</span>
+        <span class="dot">·</span>
+        <span>Motion Design</span>
+        <span class="dot">·</span>
+        <span>Packaging</span>
+        <span class="dot">·</span>
+        <span>Logo Design</span>
+        <span class="dot">·</span>
+        <span>Brand Identity</span>
+        <span class="dot">·</span>
+        <span>Visual Systems</span>
+        <span class="dot">·</span>
+        <span>Marketing Strategy</span>
+        <span class="dot">·</span>
+        <span>Motion Design</span>
+        <span class="dot">·</span>
+        <span>Packaging</span>
+        <span class="dot">·</span>
+        <span>Logo Design</span>
+        <span class="dot">·</span>
       </div>
     </div>
-  </section>
 
-  <section id="contact">
-    <div class="container">
-      <div class="contact-inner reveal">
-        <span class="section-tag">Contatti</span>
-        <h2>Vuoi dare forma<br />alla tua identità?</h2>
-        <p>Hai un progetto in mente? Parliamone.<br />Siamo sempre alla ricerca di sfide interessanti.</p>
-        <form class="contact-form" id="contactForm" action="https://formspree.io/f/xkoqwvgp" method="POST">
-          <input type="hidden" name="_subject" value="Nuovo contatto dal sito Dualframe" />
-          <!-- FIX: honeypot spostato su classe CSS, aggiunto aria-hidden -->
-          <input type="text" name="_gotcha" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true" />
-          <div class="form-row">
-            <div class="form-group">
-              <label for="name">Nome</label>
-              <input type="text" id="name" name="name" placeholder="Il tuo nome" autocomplete="name" required />
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="tua@email.com" autocomplete="email" required />
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="service">Tipo di progetto</label>
-            <select id="service" name="service">
-              <option value="">Seleziona un servizio</option>
-              <option value="identity">Brand Identity</option>
-              <option value="marketing">Marketing</option>
-              <option value="motion">Motion Design</option>
-              <option value="express">Pacchetto Express</option>
-              <option value="business">Pacchetto Business</option>
-              <option value="premium">Pacchetto Premium</option>
-              <option value="custom">Progetto su misura</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="message">Messaggio</label>
-            <textarea id="message" name="message" placeholder="Raccontaci del tuo brand e del tuo obiettivo..." rows="5" required></textarea>
-          </div>
-          <button type="submit" class="btn-primary btn-submit">Invia messaggio →</button>
-        </form>
-        <div class="contact-direct">
-          <!-- FIX: aria-hidden sulle emoji decorative nei contatti -->
-          <a href="mailto:info@dualframe.it" class="contact-link">
-            <span aria-hidden="true">✉</span> info@dualframe.it
+    <section id="services">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Competenze</span>
+          <h2>Cosa progettiamo</h2>
+        </div>
+        <div class="services-grid">
+          <a href="service-brand-identity.html" class="service-card reveal">
+            <div class="service-num">01</div>
+            <h3>Brand Identity</h3>
+            <p>Logo, palette, tipografia e sistema visivo completo. Costruiamo identità che posizionano il tuo brand un gradino sopra la concorrenza e lo rendono riconoscibile al primo sguardo.</p>
+            <div class="service-arrow">→</div>
           </a>
-          <a href="tel:+393341831985" class="contact-link">
-            <span aria-hidden="true">📞</span> 334 1831985
+          <a href="service-marketing.html" class="service-card reveal">
+            <div class="service-num">02</div>
+            <h3>Marketing</h3>
+            <p>Piani editoriali, campagne, contenuti e funnel con un obiettivo preciso: portare richieste qualificate. Niente vanity metrics, solo visibilità che genera margine.</p>
+            <div class="service-arrow">→</div>
+          </a>
+          <a href="service-innovation.html" class="service-card reveal">
+            <div class="service-num">03</div>
+            <h3>Brand Strategy</h3>
+            <p>Posizionamento, tono di voce, architettura del messaggio. Definiamo la direzione strategica prima di toccare qualsiasi elemento visivo, per evitare identità belle ma vuote.</p>
+            <div class="service-arrow">→</div>
+          </a>
+          <a href="service-motion-design.html" class="service-card reveal">
+            <div class="service-num">04</div>
+            <h3>Motion Design</h3>
+            <p>Animazioni logo, contenuti video, motion system per social e sito. Diamo profondità e movimento all'identità, aumentando attenzione e tempo di permanenza.</p>
+            <div class="service-arrow">→</div>
           </a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section id="method" aria-label="Il nostro metodo di lavoro">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Come lavoriamo</span>
+          <h2>Quattro fasi.<br />Zero improvvisazione.</h2>
+        </div>
+        <div class="method-grid">
+          <div class="method-step reveal">
+            <div class="method-num">01</div>
+            <h3>Analisi</h3>
+            <p>Studiamo il tuo mercato, i competitor e il pubblico. Capiamo dove sei oggi e dove vuoi arrivare, prima di progettare qualsiasi cosa.</p>
+          </div>
+          <div class="method-step reveal">
+            <div class="method-num">02</div>
+            <h3>Direzione creativa</h3>
+            <p>Definiamo posizionamento, tono e strategia visiva. Presentiamo concept e moodboard per allinearci sulla direzione, prima di entrare nel dettaglio.</p>
+          </div>
+          <div class="method-step reveal">
+            <div class="method-num">03</div>
+            <h3>Sviluppo</h3>
+            <p>Progettiamo il sistema di identità completo: logo, palette, tipografia, applicazioni. Ogni elemento ha una funzione precisa e un criterio dietro.</p>
+          </div>
+          <div class="method-step reveal">
+            <div class="method-num">04</div>
+            <h3>Consegna e supporto</h3>
+            <p>Ricevi asset pronti all'uso, linee guida operative e supporto per applicare l'identità su ogni canale senza perdere coerenza.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Portfolio</span>
+          <h2>Lavori selezionati</h2>
+        </div>
+        <div class="work-grid">
+
+          <a href="forloox.html" class="work-item reveal">
+            <div class="work-img">
+              <img src="assets/img/projects/forloox.jpg" alt="Forloox — Brand Identity per Barberini Ottica, Pescara" class="work-cover" loading="lazy" width="600" height="400" />
+              <div class="work-overlay"><span class="work-view">Vedi progetto →</span></div>
+              <div class="work-shape" style="background: #fe4338;"></div>
+              <div class="work-label">FORLOOX</div>
+            </div>
+            <div class="work-info">
+              <div class="work-tags"><span>Brand Identity</span><span>E-commerce</span></div>
+              <h3>Forloox</h3>
+              <p class="work-client">Barberini Ottica — Pescara</p>
+            </div>
+          </a>
+
+          <a href="il-boscaiolo.html" class="work-item reveal">
+            <div class="work-img">
+              <img src="assets/img/projects/il-boscaiolo.jpg" alt="Il Boscaiolo — Brand Identity per ristorante tradizionale" class="work-cover" loading="lazy" width="600" height="400" />
+              <div class="work-overlay"><span class="work-view">Vedi progetto →</span></div>
+              <div class="work-shape" style="background: #926a47;"></div>
+              <div class="work-label">IL BOSCAIOLO</div>
+            </div>
+            <div class="work-info">
+              <div class="work-tags"><span>Brand Identity</span><span>Ristorazione</span></div>
+              <h3>Il Boscaiolo</h3>
+              <p class="work-client">Ristorante tradizionale</p>
+            </div>
+          </a>
+
+          <a href="trustlead.html" class="work-item reveal">
+            <div class="work-img">
+              <img src="assets/img/projects/trustlead.jpg" alt="Trustlead — Brand Identity e Motion Design per Paolo Nicolai Sport Business" class="work-cover" loading="lazy" width="600" height="400" />
+              <div class="work-overlay"><span class="work-view">Vedi progetto →</span></div>
+              <div class="work-shape" style="background: #2f3ef6;"></div>
+              <div class="work-label">TRUSTLEAD</div>
+            </div>
+            <div class="work-info">
+              <div class="work-tags"><span>Brand Identity</span><span>Motion</span></div>
+              <h3>Trustlead</h3>
+              <p class="work-client">Paolo Nicolai & Co. — Sport Business</p>
+            </div>
+          </a>
+
+          <a href="chef-citeroni.html" class="work-item reveal">
+            <div class="work-img">
+              <img src="assets/img/projects/chef-citeroni.jpg" alt="Chef Citeroni — Personal Brand per Osteria Ophis, guida Michelin 2024" class="work-cover" loading="lazy" width="600" height="400" />
+              <div class="work-overlay"><span class="work-view">Vedi progetto →</span></div>
+              <div class="work-shape" style="background: #c0392b;"></div>
+              <div class="work-label">CHEF CITERONI</div>
+            </div>
+            <div class="work-info">
+              <div class="work-tags"><span>Personal Brand</span><span>Michelin 2024</span></div>
+              <h3>Chef Citeroni</h3>
+              <p class="work-client">Osteria Ophis — Alta ristorazione</p>
+            </div>
+          </a>
+
+          <a href="dinos-bar.html" class="work-item reveal">
+            <div class="work-img">
+              <img src="assets/img/projects/dinos-bar.jpg" alt="Dino's Bar — Brand Identity e Packaging per Mixology Food & Beverage" class="work-cover" loading="lazy" width="600" height="400" />
+              <div class="work-overlay"><span class="work-view">Vedi progetto →</span></div>
+              <div class="work-shape" style="background: #e8927a;"></div>
+              <div class="work-label">DINO'S BAR</div>
+            </div>
+            <div class="work-info">
+              <div class="work-tags"><span>Brand Identity</span><span>Packaging</span></div>
+              <h3>Dino's Bar</h3>
+              <p class="work-client">Mixology — Food & Beverage</p>
+            </div>
+          </a>
+
+          <a href="ulivo-dorato.html" class="work-item reveal">
+            <div class="work-img">
+              <img src="assets/img/projects/ulivo-dorato.jpg" alt="Ulivo Dorato — Brand Identity e Packaging per olio EVO agroalimentare" class="work-cover" loading="lazy" width="600" height="400" />
+              <div class="work-overlay"><span class="work-view">Vedi progetto →</span></div>
+              <div class="work-shape" style="background: #c9a227;"></div>
+              <div class="work-label">ULIVO DORATO</div>
+            </div>
+            <div class="work-info">
+              <div class="work-tags"><span>Brand Identity</span><span>Packaging</span></div>
+              <h3>Ulivo Dorato</h3>
+              <p class="work-client">Olio EVO — Agroalimentare</p>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="results" aria-label="Cosa ottieni con Dualframe">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Il risultato</span>
+          <h2>Non solo un logo.<br />Un sistema che lavora per te.</h2>
+        </div>
+        <div class="results-grid">
+          <div class="result-card reveal">
+            <h3>Riconoscibilità immediata</h3>
+            <p>Il tuo brand si distingue al primo sguardo, in ogni punto di contatto: social, sito, packaging, biglietto da visita.</p>
+          </div>
+          <div class="result-card reveal">
+            <h3>Percezione più alta</h3>
+            <p>Un'identità coerente e curata comunica professionalità. I clienti ti percepiscono come una scelta di qualità, non come un'alternativa economica.</p>
+          </div>
+          <div class="result-card reveal">
+            <h3>Coerenza su ogni canale</h3>
+            <p>Linee guida chiare e asset pronti all'uso. Il tuo team sa esattamente come applicare l'identità senza improvvisare.</p>
+          </div>
+          <div class="result-card reveal">
+            <h3>Comunicazione che converte</h3>
+            <p>Messaggi costruiti per il tuo pubblico, non per tutti. Ogni contenuto ha un obiettivo preciso: attirare, convincere, vendere.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Chi siamo</span>
+          <h2>Due teste.<br />Un solo obiettivo.</h2>
+        </div>
+        <div class="about-quote reveal">
+          <blockquote>
+            "Non ci interessa se è solo bello.<br />
+            Ci interessa se <em>ti fa scegliere.</em>"
+          </blockquote>
+        </div>
+        <p class="about-intro reveal">
+          Siamo uno studio indipendente con oltre 10 anni di esperienza nella progettazione di identità visive per brand che vogliono essere presi sul serio. Non lavoriamo in catena di montaggio: ogni progetto ha la nostra attenzione completa, dall'analisi strategica alla consegna finale.
+        </p>
+        <div class="team-grid">
+          <div class="team-card reveal">
+            <div class="team-photo">
+              <img src="assets/img/yvan.jpg" alt="Yvan, Graphic & Motion Designer di Dualframe" loading="lazy" width="300" height="300" />
+            </div>
+            <div class="team-info">
+              <h3>Yvan</h3>
+              <span>Graphic & Motion Designer</span>
+              <p>Oltre un decennio a trasformare idee in sistemi visivi che funzionano. Progetta identità, le anima e le rende coerenti su ogni canale, dal digitale alla stampa.</p>
+            </div>
+          </div>
+          <div class="team-card reveal">
+            <div class="team-photo">
+              <img src="assets/img/francesco.jpg" alt="Francesco, Marketing Strategist di Dualframe" loading="lazy" width="300" height="300" />
+            </div>
+            <div class="team-info">
+              <h3>Francesco</h3>
+              <span>Marketing Strategist & Copywriter</span>
+              <p>Definisce il posizionamento e costruisce i messaggi che rendono un brand rilevante per il suo pubblico. Ogni parola ha un obiettivo commerciale preciso.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="solutions">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Soluzioni</span>
+          <h2>Tre percorsi.<br />Un livello di cura.</h2>
+        </div>
+        <p class="pricing-sub reveal">Ogni percorso è personalizzabile. Nessun pacchetto rigido: partiamo da una base concreta e la adattiamo al tuo caso specifico.</p>
+        <div class="pricing-grid">
+          <div class="pricing-card reveal">
+            <div class="pricing-header" data-num="01">
+              <span class="pricing-icon" aria-hidden="true">⚡</span>
+              <h3>Starter</h3>
+              <span class="pricing-range">Da 800 €</span>
+            </div>
+            <div class="pricing-body">
+              <p class="pricing-desc">Per chi parte da zero o ha bisogno di una base solida su cui costruire.</p>
+              <ul class="pricing-list">
+                <li>Logo + varianti (orizzontale / verticale)</li>
+                <li>Palette colori e font coordinati</li>
+                <li>Template social — griglia 3×3 (9 post)</li>
+                <li>Mini guideline di utilizzo</li>
+              </ul>
+              <a href="#contact" class="btn-pricing package-cta" data-package="express">Richiedi un preventivo →</a>
+            </div>
+          </div>
+          <div class="pricing-card pricing-featured reveal">
+            <div class="pricing-header" data-num="02">
+              <span class="pricing-icon" aria-hidden="true">💼</span>
+              <h3>Business</h3>
+              <span class="pricing-badge">Consigliato</span>
+              <span class="pricing-range">Da 1.500 € / mese</span>
+            </div>
+            <div class="pricing-body">
+              <p class="pricing-desc">Per chi vuole presenza costante e comunicazione gestita con criterio.</p>
+              <ul class="pricing-list">
+                <li>Gestione social (6 contenuti / mese)</li>
+                <li>Materiale grafico aggiornato mensilmente</li>
+                <li>Biglietto da visita — grafica + stampa 100 pz.</li>
+                <li>Report mensile con indicazioni strategiche</li>
+              </ul>
+              <a href="#contact" class="btn-pricing package-cta" data-package="business">Richiedi un preventivo →</a>
+            </div>
+          </div>
+          <div class="pricing-card reveal">
+            <div class="pricing-header" data-num="03">
+              <span class="pricing-icon" aria-hidden="true">👑</span>
+              <h3>Premium</h3>
+              <span class="pricing-range">Da 3.000 €</span>
+            </div>
+            <div class="pricing-body">
+              <p class="pricing-desc">Per chi vuole il massimo impatto: campagna, shooting e identità completa.</p>
+              <ul class="pricing-list">
+                <li>Campagna pubblicitaria completa</li>
+                <li>Shooting professionale (foto + video)</li>
+                <li>Brand identity avanzata con guideline</li>
+                <li>Strategia di lancio coordinata</li>
+              </ul>
+              <a href="#contact" class="btn-pricing package-cta" data-package="premium">Richiedi un preventivo →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="contact-inner reveal">
+          <span class="section-tag">Contatti</span>
+          <h2>Raccontaci il tuo progetto.</h2>
+          <p>Descrivici dove sei oggi e dove vuoi arrivare.<br />Ti rispondiamo entro 24 ore con un primo feedback concreto.</p>
+          <form class="contact-form" id="contactForm" action="https://formspree.io/f/xkoqwvgp" method="POST">
+            <input type="hidden" name="_subject" value="Nuovo contatto dal sito Dualframe" />
+            <input type="text" name="_gotcha" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Nome</label>
+                <input type="text" id="name" name="name" placeholder="Il tuo nome" autocomplete="name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="tua@email.com" autocomplete="email" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="service">Tipo di progetto</label>
+              <select id="service" name="service">
+                <option value="">Seleziona un servizio</option>
+                <option value="identity">Brand Identity</option>
+                <option value="marketing">Marketing</option>
+                <option value="strategy">Brand Strategy</option>
+                <option value="motion">Motion Design</option>
+                <option value="express">Soluzione Starter</option>
+                <option value="business">Soluzione Business</option>
+                <option value="premium">Soluzione Premium</option>
+                <option value="custom">Progetto su misura</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Messaggio</label>
+              <textarea id="message" name="message" placeholder="Descrivi brevemente il tuo brand, il tuo settore e cosa vorresti migliorare..." rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn-primary btn-submit">Invia la richiesta →</button>
+            <p class="form-privacy">Inviando il modulo accetti il trattamento dei tuoi dati secondo la nostra <a href="privacy.html">Privacy Policy</a>.</p>
+          </form>
+          <div class="contact-direct">
+            <a href="mailto:info@dualframe.it" class="contact-link">
+              <span aria-hidden="true">✉</span> info@dualframe.it
+            </a>
+            <a href="tel:+393341831985" class="contact-link">
+              <span aria-hidden="true">📞</span> 334 1831985
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
 
   <footer>
-
-    <!-- ── Statement ── -->
     <div class="footer-statement">
       <div class="container">
         <span class="footer-eyebrow">Prossimo passo</span>
-        <h2 class="footer-headline">Il brand giusto<br>non si nota.<br>Si ricorda.</h2>
+        <h2 class="footer-headline">Un brand forte<br>non si nota.<br>Si sceglie.</h2>
         <a href="#contact" class="footer-cta">
-          Parliamo del tuo progetto
+          Richiedi una consulenza gratuita
           <svg class="footer-cta-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
             <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
@@ -426,30 +491,25 @@
       </div>
     </div>
 
-    <!-- ── Corpo ── -->
     <div class="footer-body">
       <div class="container">
         <div class="footer-grid">
-
-          <!-- Brand -->
           <div class="footer-brand">
             <a href="#hero" class="footer-brand-link" aria-label="Dualframe — torna in cima">
-              <img src="assets/img/logo.png" alt="Dualframe Brand Agency" class="footer-logo-img" loading="lazy" width="140" height="40" />
+              <img src="assets/img/logo.png" alt="Dualframe" class="footer-logo-img" loading="lazy" width="140" height="40" />
             </a>
-            <p class="footer-tagline">Brand &amp; Food Visual Design</p>
+            <p class="footer-tagline">Brand Identity &amp; Visual Design Studio</p>
           </div>
 
-          <!-- Navigazione -->
-          <nav class="footer-col" aria-label="Navigazione sito">
+          <nav class="footer-col" aria-label="Navigazione footer">
             <p class="footer-col-label">Studio</p>
             <a href="#services">Servizi</a>
             <a href="#work">Lavori</a>
-            <a href="#pricing">Pacchetti</a>
+            <a href="#solutions">Soluzioni</a>
             <a href="#about">Chi Siamo</a>
             <a href="#contact">Contatti</a>
           </nav>
 
-          <!-- Social -->
           <nav class="footer-col footer-col--social" aria-label="Profili social">
             <p class="footer-col-label">Social</p>
             <a href="https://www.instagram.com/dualframe__/" target="_blank" rel="noopener noreferrer">
@@ -472,51 +532,71 @@
             </a>
           </nav>
 
-          <!-- Contatti -->
           <div class="footer-col footer-col--contact">
             <p class="footer-col-label">Contatti</p>
             <a href="mailto:info@dualframe.it" class="footer-contact-link">info@dualframe.it</a>
             <a href="tel:+393341831985" class="footer-contact-link">334 1831985</a>
           </div>
-
         </div>
       </div>
     </div>
 
-    <!-- ── Bottom ── -->
     <div class="footer-bottom">
       <div class="container">
         <div class="footer-bottom-inner">
-          <span class="footer-copy">© 2026 Dualframe. Tutti i diritti riservati.</span>
-          <span class="footer-manifesto">La prima impressione decide tutto.</span>
+          <span class="footer-copy">© 2026 Dualframe. Tutti i diritti riservati. <a href="privacy.html">Privacy Policy</a></span>
+          <span class="footer-manifesto">Il tuo brand parla prima di te.</span>
         </div>
       </div>
     </div>
-
   </footer>
 
-  <!-- FIX: aggiunto defer per non bloccare il rendering -->
   <script src="script.js" defer></script>
   <script src="luxury.js" defer></script>
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Dualframe",
-    "url": "https://www.dualframe.it/",
-    "logo": "https://www.dualframe.it/assets/img/logo.png",
-    "description": "Brand Agency specializzata in Brand Identity, Marketing e Motion Design.",
-    "email": "info@dualframe.it",
-    "telephone": "+393341831985",
-    "sameAs": [
-      "https://www.instagram.com/dualframe__/",
-      "https://www.behance.net/dualframe22",
-      "https://it.pinterest.com/dualframe__/"
-    ],
-    "founder": [
-      { "@type": "Person", "name": "Yvan" },
-      { "@type": "Person", "name": "Francesco" }
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.dualframe.it/#organization",
+        "name": "Dualframe",
+        "url": "https://www.dualframe.it/",
+        "logo": "https://www.dualframe.it/assets/img/logo.png",
+        "description": "Studio di Brand Identity, Marketing e Motion Design. Progettiamo identità visive che aumentano valore percepito e impatto commerciale.",
+        "email": "info@dualframe.it",
+        "telephone": "+393341831985",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Pescara",
+          "addressCountry": "IT"
+        },
+        "sameAs": [
+          "https://www.instagram.com/dualframe__/",
+          "https://www.behance.net/dualframe22",
+          "https://it.pinterest.com/dualframe__/"
+        ],
+        "founder": [
+          { "@type": "Person", "name": "Yvan", "jobTitle": "Graphic & Motion Designer" },
+          { "@type": "Person", "name": "Francesco", "jobTitle": "Marketing Strategist & Copywriter" }
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.dualframe.it/#website",
+        "name": "Dualframe",
+        "url": "https://www.dualframe.it/",
+        "publisher": { "@id": "https://www.dualframe.it/#organization" },
+        "inLanguage": "it-IT"
+      },
+      {
+        "@type": "Service",
+        "provider": { "@id": "https://www.dualframe.it/#organization" },
+        "name": "Brand Identity Design",
+        "description": "Progettazione di identità visive complete: logo, palette colori, tipografia, linee guida e sistema visivo coordinato.",
+        "areaServed": "IT"
+      }
     ]
   }
   </script>
