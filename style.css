@@ -1128,7 +1128,7 @@ footer {
 }
 .team-photo {
   width: 100%;
-  aspect-ratio: 4/3;
+  aspect-ratio: 1/1;
   overflow: hidden;
   background: linear-gradient(135deg, var(--accent-2), var(--teal));
 }
