@@ -22,8 +22,8 @@
   --accent-2: #e07040;
   --teal: #2a8a7a;
   --white: #ffffff;
-  --font-display: 'Space Grotesk', sans-serif;
-  --font-body: 'Outfit', sans-serif;
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'Inter', sans-serif;
   --transition: 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
   --radius: 4px;
 }
