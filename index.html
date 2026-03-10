@@ -7,22 +7,26 @@
   <meta name="description" content="Dualframe è una brand agency specializzata in Brand Identity, Marketing e Motion Design. La prima impressione decide tutto. Noi la progettiamo per te." />
   <meta name="keywords" content="brand agency, brand identity, logo design, marketing, motion design, visual design, packaging, Pescara, Italia" />
   <meta name="author" content="Dualframe" />
-  <link rel="canonical" href="https://djfrancesco283-maker.github.io/dualframe/" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <link rel="canonical" href="https://www.dualframe.it/" />
 
-  <!-- Open Graph -->
+  <!-- OG: sostituire logo.png con un'immagine social dedicata 1200×630 px per anteprima ottimale -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Dualframe" />
   <meta property="og:title" content="Dualframe — Brand Agency" />
   <meta property="og:description" content="Brand Identity, Marketing e Motion Design. La prima impressione decide tutto. Noi la progettiamo per te." />
-  <meta property="og:url" content="https://djfrancesco283-maker.github.io/dualframe/" />
-  <meta property="og:image" content="https://djfrancesco283-maker.github.io/dualframe/assets/img/projects/forloox.jpg" />
+  <meta property="og:url" content="https://www.dualframe.it/" />
+  <meta property="og:image" content="https://www.dualframe.it/assets/img/og-social.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Dualframe Brand Agency" />
   <meta property="og:locale" content="it_IT" />
 
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Dualframe — Brand Agency" />
   <meta name="twitter:description" content="Brand Identity, Marketing e Motion Design. La prima impressione decide tutto." />
-  <meta name="twitter:image" content="https://djfrancesco283-maker.github.io/dualframe/assets/img/projects/forloox.jpg" />
+  <meta name="twitter:image" content="https://www.dualframe.it/assets/img/og-social.jpg" />
 
   <link rel="icon" type="image/png" href="assets/img/logomark.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -30,47 +34,50 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="luxury.css" />
+
+  <style>
+    /* Honeypot anti-spam — nascosto via CSS, non inline */
+    .hp-field { position: absolute; left: -9999px; opacity: 0; height: 0; width: 0; overflow: hidden; }
+  </style>
 </head>
 <body>
 
-  <!-- NAV -->
   <nav id="navbar">
     <a href="#hero" class="logo">
-      <img src="assets/img/logo.png" alt="Dualframe Brand Agency" class="logo-img" />
+      <img src="assets/img/logo.png" alt="Dualframe Brand Agency" class="logo-img" width="140" height="40" />
     </a>
     <div class="nav-links">
       <a href="#services">Servizi</a>
       <a href="#work">Lavori</a>
       <a href="#pricing">Pacchetti</a>
-      <a href="#about">About</a>
-      <a href="call.html" class="btn-nav">Call gratuita 15 min</a>
+      <a href="#about">Chi Siamo</a>
+      <a href="#contact" class="btn-nav">Contattaci</a>
     </div>
     <button class="hamburger" id="hamburger" type="button" aria-label="Apri menu" aria-controls="mobileMenu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </nav>
 
-  <!-- MOBILE MENU -->
   <div class="mobile-menu" id="mobileMenu">
     <a href="#services" class="mobile-link">Servizi</a>
     <a href="#work" class="mobile-link">Lavori</a>
     <a href="#pricing" class="mobile-link">Pacchetti</a>
-    <a href="#about" class="mobile-link">About</a>
-    <a href="call.html" class="mobile-link">Call gratuita 15 min</a>
+    <a href="#about" class="mobile-link">Chi Siamo</a>
+    <a href="#contact" class="mobile-link">Contattaci</a>
   </div>
 
-  <!-- HERO -->
   <section id="hero">
     <div class="hero-bg">
       <div class="grid-overlay"></div>
       <div class="hero-glow glow-orange"></div>
       <div class="hero-glow glow-teal"></div>
-      <img src="assets/img/logomark.png" alt="" class="hero-logomark" aria-hidden="true" />
+      <!-- Logomark decorativo: eager perché above-the-fold -->
+      <img src="assets/img/logomark.png" alt="" class="hero-logomark" aria-hidden="true" width="600" height="600" />
     </div>
     <div class="hero-content">
       <div class="hero-tag reveal">Brand Agency</div>
       <h1 class="hero-title reveal">
-        La prima impressione<br />
+        La prima <span class="hero-title-line">impressione</span><br />
         <span class="outline-text">decide tutto.</span>
       </h1>
       <p class="hero-sub reveal">
@@ -89,7 +96,6 @@
     </div>
   </section>
 
-  <!-- MARQUEE -->
   <div class="marquee-wrap">
     <div class="marquee-track">
       <span>Brand Identity</span>
@@ -119,7 +125,6 @@
     </div>
   </div>
 
-  <!-- SERVICES -->
   <section id="services">
     <div class="container">
       <div class="section-header reveal">
@@ -127,6 +132,7 @@
         <h2>Servizi</h2>
       </div>
       <div class="services-grid">
+        <!-- FIX: rimosso target="_blank" rel="noopener" — navigazione interna nella stessa tab -->
         <a href="service-brand-identity.html" class="service-card reveal" aria-label="Apri dettagli servizio Brand Identity">
           <div class="service-num">01</div>
           <h3>Brand Identity</h3>
@@ -155,7 +161,6 @@
     </div>
   </section>
 
-  <!-- WORK -->
   <section id="work">
     <div class="container">
       <div class="section-header reveal">
@@ -164,10 +169,9 @@
       </div>
       <div class="work-grid">
 
-        <!-- Forloox -->
         <a href="forloox.html" class="work-item reveal">
           <div class="work-img">
-            <img src="assets/img/projects/forloox.jpg" alt="Forloox" class="work-cover" />
+            <img src="assets/img/projects/forloox.jpg" alt="Forloox — Brand Identity per Barberini Ottica, Pescara" class="work-cover" loading="lazy" width="600" height="400" />
             <div class="work-overlay"><span class="work-view">Vedi progetto →</span></div>
             <div class="work-shape" style="background: #fe4338;"></div>
             <div class="work-label">FORLOOX</div>
@@ -179,10 +183,9 @@
           </div>
         </a>
 
-        <!-- Il Boscaiolo -->
         <a href="il-boscaiolo.html" class="work-item reveal">
           <div class="work-img">
-            <img src="assets/img/projects/il-boscaiolo.jpg" alt="Il Boscaiolo" class="work-cover" />
+            <img src="assets/img/projects/il-boscaiolo.jpg" alt="Il Boscaiolo — Brand Identity per ristorante tradizionale" class="work-cover" loading="lazy" width="600" height="400" />
             <div class="work-overlay"><span class="work-view">Vedi progetto →</span></div>
             <div class="work-shape" style="background: #926a47;"></div>
             <div class="work-label">IL BOSCAIOLO</div>
@@ -194,10 +197,9 @@
           </div>
         </a>
 
-        <!-- Trustlead -->
         <a href="trustlead.html" class="work-item reveal">
           <div class="work-img">
-            <img src="assets/img/projects/trustlead.jpg" alt="Trustlead" class="work-cover" />
+            <img src="assets/img/projects/trustlead.jpg" alt="Trustlead — Brand Identity e Motion Design per Paolo Nicolai Sport Business" class="work-cover" loading="lazy" width="600" height="400" />
             <div class="work-overlay"><span class="work-view">Vedi progetto →</span></div>
             <div class="work-shape" style="background: #2f3ef6;"></div>
             <div class="work-label">TRUSTLEAD</div>
@@ -209,10 +211,9 @@
           </div>
         </a>
 
-        <!-- Chef Citeroni -->
         <a href="chef-citeroni.html" class="work-item reveal">
           <div class="work-img">
-            <img src="assets/img/projects/chef-citeroni.jpg" alt="Chef Citeroni" class="work-cover" />
+            <img src="assets/img/projects/chef-citeroni.jpg" alt="Chef Citeroni — Personal Brand per Osteria Ophis, guida Michelin 2024" class="work-cover" loading="lazy" width="600" height="400" />
             <div class="work-overlay"><span class="work-view">Vedi progetto →</span></div>
             <div class="work-shape" style="background: #c0392b;"></div>
             <div class="work-label">CHEF CITERONI</div>
@@ -224,10 +225,9 @@
           </div>
         </a>
 
-        <!-- Dino's Bar -->
         <a href="dinos-bar.html" class="work-item reveal">
           <div class="work-img">
-            <img src="assets/img/projects/dinos-bar.jpg" alt="Dino's Bar" class="work-cover" />
+            <img src="assets/img/projects/dinos-bar.jpg" alt="Dino's Bar — Brand Identity e Packaging per Mixology Food & Beverage" class="work-cover" loading="lazy" width="600" height="400" />
             <div class="work-overlay"><span class="work-view">Vedi progetto →</span></div>
             <div class="work-shape" style="background: #e8927a;"></div>
             <div class="work-label">DINO'S BAR</div>
@@ -239,10 +239,9 @@
           </div>
         </a>
 
-        <!-- Ulivo Dorato -->
         <a href="ulivo-dorato.html" class="work-item reveal">
           <div class="work-img">
-            <img src="assets/img/projects/ulivo-dorato.jpg" alt="Ulivo Dorato" class="work-cover" />
+            <img src="assets/img/projects/ulivo-dorato.jpg" alt="Ulivo Dorato — Brand Identity e Packaging per olio EVO agroalimentare" class="work-cover" loading="lazy" width="600" height="400" />
             <div class="work-overlay"><span class="work-view">Vedi progetto →</span></div>
             <div class="work-shape" style="background: #c9a227;"></div>
             <div class="work-label">ULIVO DORATO</div>
@@ -258,7 +257,6 @@
     </div>
   </section>
 
-  <!-- ABOUT -->
   <section id="about">
     <div class="container">
       <div class="section-header reveal">
@@ -271,20 +269,25 @@
           ci interessa se <em>ti fa guadagnare di più.</em>"
         </blockquote>
       </div>
+      <!-- FIX: riformulato — l'esperienza decennale è dei fondatori, non dell'agenzia -->
       <p class="about-intro reveal">
-        Vantiamo un'esperienza quasi decennale nella progettazione della comunicazione visiva. Siamo capaci di dare forma al tuo pensiero con originalità e professionalità.
+        Portiamo oltre 10 anni di esperienza nella progettazione della comunicazione visiva. Siamo capaci di dare forma al tuo pensiero con originalità e professionalità.
       </p>
       <div class="team-grid">
         <div class="team-card reveal">
-          <div class="team-photo"><img src="assets/img/yvan.jpg" alt="Yvan" /></div>
+          <div class="team-photo">
+            <img src="assets/img/yvan.jpg" alt="Yvan, Graphic & Motion Designer" loading="lazy" width="300" height="300" />
+          </div>
           <div class="team-info">
             <h3>Yvan</h3>
             <span>Graphic & Motion Designer Specialist</span>
-            <p>Trasforma le idee in forme. Specialista nella costruzione di sistemi visivi coerenti e nell'animazione di identità attraverso il motion design.</p>
+            <p>Inizia a fare grafica a 20 anni, oggi conta un decennio di esperienza sul campo. Trasforma le idee in forme e costruisce sistemi visivi coerenti, animando le identità attraverso il motion design.</p>
           </div>
         </div>
         <div class="team-card reveal">
-          <div class="team-photo"><img src="assets/img/francesco.jpg" alt="Francesco" /></div>
+          <div class="team-photo">
+            <img src="assets/img/francesco.jpg" alt="Francesco, Marketing Strategist & Copywriter" loading="lazy" width="300" height="300" />
+          </div>
           <div class="team-info">
             <h3>Francesco</h3>
             <span>Marketing Strategist & Copywriter</span>
@@ -295,7 +298,6 @@
     </div>
   </section>
 
-  <!-- PRICING -->
   <section id="pricing">
     <div class="container">
       <div class="section-header reveal">
@@ -306,7 +308,8 @@
       <div class="pricing-grid">
         <div class="pricing-card reveal">
           <div class="pricing-header">
-            <span class="pricing-icon">⚡</span>
+            <!-- FIX: aria-hidden sulle emoji decorative -->
+            <span class="pricing-icon" aria-hidden="true">⚡</span>
             <h3>Express</h3>
             <span class="pricing-badge">Popolare</span>
           </div>
@@ -321,7 +324,7 @@
         </div>
         <div class="pricing-card pricing-featured reveal">
           <div class="pricing-header">
-            <span class="pricing-icon">💼</span>
+            <span class="pricing-icon" aria-hidden="true">💼</span>
             <h3>Business</h3>
           </div>
           <p class="pricing-desc">Per chi vuole continuità e crescita costante</p>
@@ -334,7 +337,7 @@
         </div>
         <div class="pricing-card reveal">
           <div class="pricing-header">
-            <span class="pricing-icon">👑</span>
+            <span class="pricing-icon" aria-hidden="true">👑</span>
             <h3>Premium</h3>
           </div>
           <p class="pricing-desc">Per chi vuole il massimo in visibilità e risultati</p>
@@ -349,7 +352,6 @@
     </div>
   </section>
 
-  <!-- CONTACT -->
   <section id="contact">
     <div class="container">
       <div class="contact-inner reveal">
@@ -358,7 +360,8 @@
         <p>Hai un progetto in mente? Parliamone.<br />Siamo sempre alla ricerca di sfide interessanti.</p>
         <form class="contact-form" id="contactForm" action="https://formspree.io/f/xkoqwvgp" method="POST">
           <input type="hidden" name="_subject" value="Nuovo contatto dal sito Dualframe" />
-          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+          <!-- FIX: honeypot spostato su classe CSS, aggiunto aria-hidden -->
+          <input type="text" name="_gotcha" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true" />
           <div class="form-row">
             <div class="form-group">
               <label for="name">Nome</label>
@@ -389,11 +392,12 @@
           <button type="submit" class="btn-primary btn-submit">Invia messaggio →</button>
         </form>
         <div class="contact-direct">
+          <!-- FIX: aria-hidden sulle emoji decorative nei contatti -->
           <a href="mailto:info@dualframe.it" class="contact-link">
-            <span>✉</span> info@dualframe.it
+            <span aria-hidden="true">✉</span> info@dualframe.it
           </a>
           <a href="tel:+393341831985" class="contact-link">
-            <span>📞</span> 334 1831985
+            <span aria-hidden="true">📞</span> 334 1831985
           </a>
         </div>
       </div>
@@ -421,6 +425,7 @@
       <div class="container">
         <div class="footer-grid">
 
+          <!-- Brand -->
           <div class="footer-brand">
             <a href="#hero" class="footer-brand-link" aria-label="Dualframe — torna in cima">
               <img src="assets/img/logo.png" alt="Dualframe Brand Agency" class="footer-logo-img" loading="lazy" width="140" height="40" />
@@ -428,6 +433,7 @@
             <p class="footer-tagline">Brand &amp; Food Visual Design</p>
           </div>
 
+          <!-- Navigazione -->
           <nav class="footer-col" aria-label="Navigazione sito">
             <p class="footer-col-label">Studio</p>
             <a href="#services">Servizi</a>
@@ -437,6 +443,7 @@
             <a href="#contact">Contatti</a>
           </nav>
 
+          <!-- Social -->
           <nav class="footer-col footer-col--social" aria-label="Profili social">
             <p class="footer-col-label">Social</p>
             <a href="https://www.instagram.com/dualframe__/" target="_blank" rel="noopener noreferrer">
@@ -459,6 +466,7 @@
             </a>
           </nav>
 
+          <!-- Contatti -->
           <div class="footer-col footer-col--contact">
             <p class="footer-col-label">Contatti</p>
             <a href="mailto:info@dualframe.it" class="footer-contact-link">info@dualframe.it</a>
@@ -481,16 +489,17 @@
 
   </footer>
 
-  <script src="script.js"></script>
-  <script src="luxury.js"></script>
+  <!-- FIX: aggiunto defer per non bloccare il rendering -->
+  <script src="script.js" defer></script>
+  <script src="luxury.js" defer></script>
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Dualframe",
-    "url": "https://djfrancesco283-maker.github.io/dualframe/",
-    "logo": "https://djfrancesco283-maker.github.io/dualframe/assets/img/logo.png",
+    "url": "https://www.dualframe.it/",
+    "logo": "https://www.dualframe.it/assets/img/logo.png",
     "description": "Brand Agency specializzata in Brand Identity, Marketing e Motion Design.",
     "email": "info@dualframe.it",
     "telephone": "+393341831985",
