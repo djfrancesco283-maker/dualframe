@@ -1513,144 +1513,20 @@ footer {
 
 
 
-/* ============================================
-   SKIP LINK (Accessibility)
-   ============================================ */
-.skip-link {
-  position: absolute;
-  top: -100%;
-  left: 1rem;
-  z-index: 10000;
-  padding: 0.75rem 1.5rem;
-  background: var(--white);
-  color: var(--bg);
-  font-weight: 600;
-  font-size: 0.875rem;
-  border-radius: 4px;
-  text-decoration: none;
-  transition: top 0.2s;
-}
-.skip-link:focus {
-  top: 1rem;
+.hero {
+position: relative;
+overflow: hidden;
 }
 
-/* ============================================
-   METHOD SECTION
-   ============================================ */
-#method {
-  padding: 8rem 0;
-}
-.method-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
-}
-.method-step {
-  position: relative;
-  padding: 2rem 1.5rem;
-  background: var(--bg-2);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  transition: var(--transition);
-}
-.method-step:hover {
-  border-color: rgba(255,255,255,0.12);
-  background: var(--bg-3);
-}
-.method-num {
-  font-family: var(--font-display);
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: var(--accent-2);
-  letter-spacing: 0.1em;
-  margin-bottom: 1.25rem;
-}
-.method-step h3 {
-  font-family: var(--font-display);
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: var(--white);
-  margin-bottom: 0.75rem;
-}
-.method-step p {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  line-height: 1.7;
-}
-
-/* ============================================
-   RESULTS SECTION
-   ============================================ */
-#results {
-  padding: 8rem 0;
-}
-.results-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-}
-.result-card {
-  padding: 2.5rem 2rem;
-  background: var(--bg-2);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  transition: var(--transition);
-}
-.result-card:hover {
-  border-color: rgba(255,255,255,0.12);
-  background: var(--bg-3);
-}
-.result-card h3 {
-  font-family: var(--font-display);
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--white);
-  margin-bottom: 0.75rem;
-}
-.result-card p {
-  font-size: 0.875rem;
-  color: var(--text-muted);
-  line-height: 1.7;
-}
-
-/* ============================================
-   PRICING RANGE
-   ============================================ */
-.pricing-range {
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: rgba(255,255,255,0.5);
-  letter-spacing: 0.02em;
-}
-
-/* ============================================
-   FORM PRIVACY DISCLAIMER
-   ============================================ */
-.form-privacy {
-  font-size: 0.75rem;
-  color: var(--text-dim);
-  margin-top: 1rem;
-  line-height: 1.6;
-}
-.form-privacy a {
-  color: var(--text-muted);
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
-.form-privacy a:hover {
-  color: var(--white);
-}
-
-/* ============================================
-   RESPONSIVE — NEW SECTIONS
-   ============================================ */
-@media (max-width: 1024px) {
-  .method-grid { grid-template-columns: repeat(2, 1fr); }
-  .results-grid { grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 768px) {
-  .method-grid { grid-template-columns: 1fr; }
-  .results-grid { grid-template-columns: 1fr; }
-  #method { padding: 5rem 0; }
-  #results { padding: 5rem 0; }
+.hero::before {
+content: "";
+position: absolute;
+top: -200px;
+left: 50%;
+transform: translateX(-50%);
+width: 900px;
+height: 900px;
+background: radial-gradient(circle, rgba(0,255,200,0.25) 0%, rgba(0,0,0,0) 60%);
+filter: blur(120px);
+z-index: -1;
 }
