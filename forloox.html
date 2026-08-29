@@ -3,18 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action https://formspree.io; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self'; connect-src 'self' https://formspree.io; upgrade-insecure-requests" />
   <title>Forloox — Dualframe</title>
   <meta name="description" content="Forloox — Brand Identity per Barberini Ottica, Pescara. E-commerce luxury eyewear ispirato all'architettura storica del palazzetto Imperato." />
-  <link rel="canonical" href="https://djfrancesco283-maker.github.io/dualframe/forloox.html" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.dualframe.it/forloox.html" />
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="Dualframe" />
   <meta property="og:title" content="Forloox — Brand Identity | Dualframe" />
   <meta property="og:description" content="E-commerce luxury eyewear. Un BrandMark ispirato all'architettura storica del palazzetto Imperato di Pescara." />
-  <meta property="og:url" content="https://djfrancesco283-maker.github.io/dualframe/forloox.html" />
-  <meta property="og:image" content="https://djfrancesco283-maker.github.io/dualframe/assets/img/projects/forloox.jpg" />
+  <meta property="og:url" content="https://www.dualframe.it/forloox.html" />
+  <meta property="og:image" content="https://www.dualframe.it/assets/img/projects/forloox.jpg" />
+  <meta property="og:image:width" content="1920" />
+  <meta property="og:image:height" content="1080" />
+  <meta property="og:image:alt" content="forloox — progetto Dualframe" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Forloox — Brand Identity | Dualframe" />
-  <meta name="twitter:image" content="https://djfrancesco283-maker.github.io/dualframe/assets/img/projects/forloox.jpg" />
+  <meta name="twitter:description" content="E-commerce luxury eyewear. Un BrandMark ispirato all'architettura storica del palazzetto Imperato di Pescara." />
+  <meta name="twitter:image" content="https://www.dualframe.it/assets/img/projects/forloox.jpg" />
   <link rel="icon" type="image/png" href="assets/img/logomark.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,9 +32,9 @@
 <body>
 
   <!-- NAV -->
-  <nav id="navbar">
+  <nav id="navbar" aria-label="Navigazione principale">
     <a href="index.html" class="logo">
-      <img src="assets/img/logo.png" alt="Dualframe Brand Agency" class="logo-img" />
+      <img src="assets/img/logo.png" alt="Dualframe Brand Agency" class="logo-img" width="140" height="40" />
     </a>
     <div class="nav-links">
       <a href="index.html#services">Servizi</a>
@@ -36,13 +43,13 @@
       <a href="index.html#about">About</a>
       <a href="index.html#contact" class="btn-nav">Contattaci</a>
     </div>
-    <button class="hamburger" id="hamburger" aria-label="Menu">
+    <button class="hamburger" id="hamburger" type="button" aria-label="Apri menu" aria-controls="mobileMenu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </nav>
 
   <!-- MOBILE MENU -->
-  <div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
     <a href="index.html#services" class="mobile-link">Servizi</a>
     <a href="index.html#work" class="mobile-link">Lavori</a>
     <a href="index.html#pricing" class="mobile-link">Pacchetti</a>
@@ -66,7 +73,7 @@
 
   <!-- COVER IMAGE -->
   <div class="project-cover container">
-    <img src="assets/img/projects/forloox.jpg" alt="Forloox — Brand Identity" />
+    <img src="assets/img/projects/forloox.webp" alt="Forloox — Brand Identity" loading="eager" fetchpriority="high" width="1920" height="1080" />
   </div>
 
   <!-- DESCRIPTION -->
@@ -77,7 +84,7 @@
 
   <!-- COLORS -->
   <div class="project-colors container">
-    <h4>Palette colori</h4>
+    <h2>Palette colori</h2>
     <div class="color-swatches">
       <div class="color-swatch" style="background: #fe4338;" title="#fe4338"></div>
       <div class="color-swatch" style="background: #003594;" title="#003594"></div>
@@ -87,29 +94,22 @@
 
   <!-- GALLERY -->
   <div class="project-gallery container">
-    <h4>Galleria</h4>
+    <h2>Galleria</h2>
     <div class="gallery-grid">
-      <img src="assets/img/projects/forloox.jpg" alt="forloox cover" onclick="openLightbox(this.src)" />
-      <img src="assets/img/projects/forloox-detail.jpg" alt="forloox detail" onclick="openLightbox(this.src)" />
+      <button type="button" class="gallery-button js-lightbox-trigger" data-lightbox-src="assets/img/projects/forloox.webp" aria-label="Apri la copertina del progetto Forloox">
+        <img src="assets/img/projects/forloox.webp" alt="Copertina del progetto Forloox" loading="lazy" width="1920" height="1080" />
+      </button>
+      <button type="button" class="gallery-button js-lightbox-trigger" data-lightbox-src="assets/img/projects/forloox-detail.webp" aria-label="Apri un dettaglio del progetto Forloox">
+        <img src="assets/img/projects/forloox-detail.webp" alt="Dettaglio grafico del progetto Forloox" loading="lazy" width="1320" height="870" />
+      </button>
     </div>
   </div>
 
   <!-- LIGHTBOX -->
-  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
-    <img id="lightbox-img" src="" alt="" />
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Anteprima immagine" aria-hidden="true">
+    <button class="lightbox-close" type="button" aria-label="Chiudi anteprima">&times;</button>
+    <img id="lightbox-img" src="assets/img/projects/forloox.webp" alt="" />
   </div>
-
-  <script>
-    function openLightbox(src) {{
-      document.getElementById('lightbox-img').src = src;
-      document.getElementById('lightbox').classList.add('open');
-    }}
-    function closeLightbox() {{
-      document.getElementById('lightbox').classList.remove('open');
-    }}
-    document.addEventListener('keydown', e => {{ if (e.key === 'Escape') closeLightbox(); }});
-  </script>
   <!-- CTA -->
   <div class="project-cta">
     <p>Vuoi un'identità così per il tuo brand?</p>
@@ -194,6 +194,7 @@
       <div class="container">
         <div class="footer-bottom-inner">
           <span class="footer-copy">© 2026 Dualframe. Tutti i diritti riservati.</span>
+          <a href="privacy.html" class="footer-legal-link">Privacy</a>
           <span class="footer-manifesto">La prima impressione decide tutto.</span>
         </div>
       </div>
@@ -201,6 +202,10 @@
 
   </footer>
 
-  <script src="script.js"></script>
+  <script src="project.js" defer></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
+
+
+

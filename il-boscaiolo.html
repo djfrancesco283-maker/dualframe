@@ -3,18 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action https://formspree.io; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self'; connect-src 'self' https://formspree.io; upgrade-insecure-requests" />
   <title>Il Boscaiolo — Dualframe</title>
   <meta name="description" content="Il Boscaiolo — Brand Identity per ristorante tradizionale. Dal fuoco della brace al calore del legno, un marchio che parla di casa e di sapori genuini." />
-  <link rel="canonical" href="https://djfrancesco283-maker.github.io/dualframe/il-boscaiolo.html" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.dualframe.it/il-boscaiolo.html" />
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="Dualframe" />
   <meta property="og:title" content="Il Boscaiolo — Brand Identity | Dualframe" />
   <meta property="og:description" content="Ristorante tradizionale. Un brand che parla di casa, di cibo e di autenticità." />
-  <meta property="og:url" content="https://djfrancesco283-maker.github.io/dualframe/il-boscaiolo.html" />
-  <meta property="og:image" content="https://djfrancesco283-maker.github.io/dualframe/assets/img/projects/il-boscaiolo.jpg" />
+  <meta property="og:url" content="https://www.dualframe.it/il-boscaiolo.html" />
+  <meta property="og:image" content="https://www.dualframe.it/assets/img/projects/il-boscaiolo.jpg" />
+  <meta property="og:image:width" content="1920" />
+  <meta property="og:image:height" content="1080" />
+  <meta property="og:image:alt" content="il boscaiolo — progetto Dualframe" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Il Boscaiolo — Brand Identity | Dualframe" />
-  <meta name="twitter:image" content="https://djfrancesco283-maker.github.io/dualframe/assets/img/projects/il-boscaiolo.jpg" />
+  <meta name="twitter:description" content="Ristorante tradizionale. Un brand che parla di casa, di cibo e di autenticità." />
+  <meta name="twitter:image" content="https://www.dualframe.it/assets/img/projects/il-boscaiolo.jpg" />
   <link rel="icon" type="image/png" href="assets/img/logomark.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,9 +31,9 @@
 </head>
 <body>
 
-  <nav id="navbar">
+  <nav id="navbar" aria-label="Navigazione principale">
     <a href="index.html" class="logo">
-      <img src="assets/img/logo.png" alt="Dualframe Brand Agency" class="logo-img" />
+      <img src="assets/img/logo.png" alt="Dualframe Brand Agency" class="logo-img" width="140" height="40" />
     </a>
     <div class="nav-links">
       <a href="index.html#services">Servizi</a>
@@ -35,12 +42,12 @@
       <a href="index.html#about">About</a>
       <a href="index.html#contact" class="btn-nav">Contattaci</a>
     </div>
-    <button class="hamburger" id="hamburger" aria-label="Menu">
+    <button class="hamburger" id="hamburger" type="button" aria-label="Apri menu" aria-controls="mobileMenu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </nav>
 
-  <div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
     <a href="index.html#services" class="mobile-link">Servizi</a>
     <a href="index.html#work" class="mobile-link">Lavori</a>
     <a href="index.html#pricing" class="mobile-link">Pacchetti</a>
@@ -61,7 +68,7 @@
   </section>
 
   <div class="project-cover container">
-    <img src="assets/img/projects/il-boscaiolo.jpg" alt="Il Boscaiolo — Brand Identity" />
+    <img src="assets/img/projects/il-boscaiolo.webp" alt="Il Boscaiolo — Brand Identity" loading="eager" fetchpriority="high" width="1920" height="1080" />
   </div>
 
   <div class="project-body">
@@ -70,7 +77,7 @@
   </div>
 
   <div class="project-colors container">
-    <h4>Palette colori</h4>
+    <h2>Palette colori</h2>
     <div class="color-swatches">
       <div class="color-swatch" style="background: #926a47;" title="#926a47"></div>
       <div class="color-swatch" style="background: #333333;" title="#333333"></div>
@@ -156,12 +163,16 @@
       <div class="container">
         <div class="footer-bottom-inner">
           <span class="footer-copy">© 2026 Dualframe. Tutti i diritti riservati.</span>
+          <a href="privacy.html" class="footer-legal-link">Privacy</a>
           <span class="footer-manifesto">La prima impressione decide tutto.</span>
         </div>
       </div>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
+
+
+
