@@ -1549,14 +1549,3 @@ background: radial-gradient(circle, rgba(0,255,200,0.25) 0%, rgba(0,0,0,0) 60%);
 filter: blur(120px);
 z-index: -1;
 }
-
-
-/* Accessibilità, form e collegamenti legali */
-:where(a,button,input,select,textarea):focus-visible{outline:2px solid var(--white);outline-offset:4px}
-.footer-bottom-inner{flex-wrap:wrap;gap:1rem 2rem}
-.footer-legal-link{color:var(--text-dim);font-size:.72rem;text-decoration:underline;text-underline-offset:.2em}
-.footer-legal-link:hover,.footer-legal-link:focus-visible{color:var(--white)}
-.form-consent{display:flex;align-items:flex-start;gap:.65rem;color:var(--text-muted);font-size:.82rem;line-height:1.5}
-.form-consent input{flex:0 0 auto;margin-top:.2rem}.form-consent a{color:var(--white)}
-.form-status{min-height:1.4em;color:var(--text-muted);font-size:.85rem}.form-status--success{color:#86d9a7}.form-status--error{color:#ff9b9b}
-
