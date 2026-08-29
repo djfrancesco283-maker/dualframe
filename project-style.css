@@ -214,7 +214,3 @@
     margin-bottom: 3rem;
   }
 }
-
-
-.gallery-button{display:block;width:100%;padding:0;border:0;border-radius:6px;background:transparent;cursor:zoom-in}.gallery-button img{width:100%;height:auto}.gallery-button:focus-visible,.lightbox-close:focus-visible{outline:2px solid #fff;outline-offset:4px}body.lightbox-open{overflow:hidden}
-

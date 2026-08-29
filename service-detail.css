@@ -303,7 +303,3 @@ body.service-detail-body {
     font-size: clamp(2.2rem, 13vw, 3.4rem);
   }
 }
-
-
-.service-legal{padding:0 1.5rem 2rem;text-align:center;color:var(--text-dim);font-size:.75rem}.service-legal a{color:var(--text-muted);text-underline-offset:.2em}.service-legal a:hover,.service-legal a:focus-visible{color:var(--white)}
-

@@ -1,49 +1,126 @@
 (function () {
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const coarse = window.matchMedia('(pointer: coarse)').matches;
-  const hero = document.getElementById('hero');
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const isCoarsePointer = window.matchMedia("(pointer: coarse)").matches;
 
-  if (hero && !reduceMotion && 'IntersectionObserver' in window) {
-    let tx=0,ty=0,cx=0,cy=0,targetScroll=0,currentScroll=0,frame=null,inView=false;
-    if (!coarse) {
-      hero.addEventListener('pointermove', event => {
-        const rect=hero.getBoundingClientRect();
-        tx=(((event.clientX-rect.left)/rect.width)-.5)*26;
-        ty=(((event.clientY-rect.top)/rect.height)-.5)*20;
-      }, { passive:true });
-      hero.addEventListener('pointerleave', () => { tx=0; ty=0; });
-    }
-    const animate=() => {
-      if (!inView || document.hidden) { frame=null; return; }
-      const rect=hero.getBoundingClientRect();
-      targetScroll=Math.max(-120,Math.min(120,-rect.top*.18));
-      cx+=(tx-cx)*.075; cy+=(ty-cy)*.075; currentScroll+=(targetScroll-currentScroll)*.06;
-      hero.style.setProperty('--mx',`${cx.toFixed(2)}px`);
-      hero.style.setProperty('--my',`${cy.toFixed(2)}px`);
-      hero.style.setProperty('--sy',`${currentScroll.toFixed(2)}px`);
-      frame=requestAnimationFrame(animate);
+  // Smooth hero parallax for glow/logomark.
+  const hero = document.getElementById("hero");
+  if (hero && !reduceMotion) {
+    let targetX = 0;
+    let targetY = 0;
+    let currentX = 0;
+    let currentY = 0;
+    let targetScroll = 0;
+    let currentScroll = 0;
+
+    const onPointerMove = (e) => {
+      const rect = hero.getBoundingClientRect();
+      const px = (e.clientX - rect.left) / rect.width - 0.5;
+      const py = (e.clientY - rect.top) / rect.height - 0.5;
+      targetX = px * 26;
+      targetY = py * 20;
     };
-    const start=() => { if (inView && !document.hidden && frame===null) frame=requestAnimationFrame(animate); };
-    new IntersectionObserver(([entry]) => {
-      inView=entry.isIntersecting;
-      if (inView) start(); else if (frame!==null) { cancelAnimationFrame(frame); frame=null; }
-    }).observe(hero);
-    document.addEventListener('visibilitychange', start);
+
+    if (!isCoarsePointer) {
+      hero.addEventListener("pointermove", onPointerMove);
+      hero.addEventListener("pointerleave", () => {
+        targetX = 0;
+        targetY = 0;
+      });
+    }
+
+    const updateParallax = () => {
+      const heroRect = hero.getBoundingClientRect();
+      const inView = heroRect.bottom > 0 && heroRect.top < window.innerHeight;
+      if (inView) {
+        targetScroll = Math.max(-120, Math.min(120, -heroRect.top * 0.18));
+      }
+
+      currentX += (targetX - currentX) * 0.075;
+      currentY += (targetY - currentY) * 0.075;
+      currentScroll += (targetScroll - currentScroll) * 0.06;
+
+      hero.style.setProperty("--mx", `${currentX.toFixed(2)}px`);
+      hero.style.setProperty("--my", `${currentY.toFixed(2)}px`);
+      hero.style.setProperty("--sy", `${currentScroll.toFixed(2)}px`);
+      requestAnimationFrame(updateParallax);
+    };
+
+    requestAnimationFrame(updateParallax);
   }
 
-  if (!reduceMotion && !coarse) {
-    document.querySelectorAll('.service-card,.pricing-card,.team-card').forEach(card => {
-      let tx=0,ty=0,cx=0,cy=0,active=false,frame=null;
-      const animate=() => {
-        cx+=(tx-cx)*.14; cy+=(ty-cy)*.14;
-        card.style.transform=`translate3d(${cx.toFixed(2)}px,${cy.toFixed(2)}px,0)`;
-        if(active||Math.abs(cx)>.05||Math.abs(cy)>.05) frame=requestAnimationFrame(animate); else frame=null;
+  // Magnetic hover for selected cards.
+  if (!reduceMotion && !isCoarsePointer) {
+    const cards = document.querySelectorAll(".service-card, .pricing-card, .team-card");
+
+    cards.forEach((card) => {
+      let tx = 0;
+      let ty = 0;
+      let cx = 0;
+      let cy = 0;
+      let active = false;
+
+      const animate = () => {
+        cx += (tx - cx) * 0.14;
+        cy += (ty - cy) * 0.14;
+        card.style.transform = `translate3d(${cx.toFixed(2)}px, ${cy.toFixed(2)}px, 0)`;
+
+        if (active || Math.abs(cx) > 0.05 || Math.abs(cy) > 0.05) {
+          requestAnimationFrame(animate);
+        }
       };
-      const start=() => { if(frame===null) frame=requestAnimationFrame(animate); };
-      card.addEventListener('pointerenter',()=>{active=true;start();});
-      card.addEventListener('pointermove',event=>{const r=card.getBoundingClientRect();tx=(((event.clientX-r.left)/r.width)-.5)*10;ty=(((event.clientY-r.top)/r.height)-.5)*8;});
-      card.addEventListener('pointerleave',()=>{active=false;tx=0;ty=0;start();});
+
+      card.addEventListener("pointerenter", () => {
+        active = true;
+        requestAnimationFrame(animate);
+      });
+
+      card.addEventListener("pointermove", (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+        tx = x * 10;
+        ty = y * 8;
+      });
+
+      card.addEventListener("pointerleave", () => {
+        active = false;
+        tx = 0;
+        ty = 0;
+        requestAnimationFrame(animate);
+      });
     });
   }
-})();
 
+  // Luxury scroll-in for cards/items (visible on mobile too).
+  if (!reduceMotion) {
+    const luxeTargets = document.querySelectorAll(
+      ".service-card, .pricing-card, .team-card, .work-item"
+    );
+
+    luxeTargets.forEach((el) => el.classList.add("lux-ready"));
+
+    const luxeObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const siblings = Array.from(entry.target.parentElement.children);
+          const idx = Math.max(0, siblings.indexOf(entry.target));
+          const delay = Math.min(340, idx * 70);
+
+          setTimeout(() => {
+            entry.target.classList.add("lux-visible");
+            entry.target.classList.remove("lux-ready");
+          }, delay);
+
+          luxeObserver.unobserve(entry.target);
+        });
+      },
+      {
+        threshold: 0.12,
+        rootMargin: "0px 0px -40px 0px",
+      }
+    );
+
+    luxeTargets.forEach((el) => luxeObserver.observe(el));
+  }
+})();
