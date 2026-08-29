@@ -1,90 +1,45 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<meta charset="UTF-8">
-<title>Call gratuita 15 min — DualFrame</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link rel="stylesheet" href="luxury.css">
-
-<style>
-body{
-background:#0b0b0c;
-color:white;
-font-family:Inter,system-ui;
-padding:40px;
-max-width:800px;
-margin:auto;
-}
-
-h1{
-font-size:40px;
-margin-bottom:10px;
-}
-
-p{
-opacity:.8;
-}
-
-form{
-margin-top:30px;
-display:flex;
-flex-direction:column;
-gap:15px;
-}
-
-input,textarea,select{
-padding:12px;
-border-radius:8px;
-border:none;
-background:#111;
-color:white;
-}
-
-button{
-padding:14px;
-background:white;
-color:black;
-border:none;
-border-radius:10px;
-font-weight:bold;
-cursor:pointer;
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action https://formspree.io; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self'; connect-src 'self' https://formspree.io; upgrade-insecure-requests" />
+  <title>Call gratuita di 15 minuti | Dualframe</title>
+  <meta name="description" content="Prenota una call gratuita di 15 minuti con Dualframe per parlare del tuo brand, del marketing e dei tuoi obiettivi." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.dualframe.it/call.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Call gratuita di 15 minuti | Dualframe" />
+  <meta property="og:url" content="https://www.dualframe.it/call.html" />
+  <meta property="og:image" content="https://www.dualframe.it/assets/img/og-social.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://www.dualframe.it/assets/img/og-social.png" />
+  <link rel="icon" type="image/png" href="assets/img/logomark.png" />
+  <style>
+    :root{color-scheme:dark}*{box-sizing:border-box}body{background:#0b0b0c;color:#fff;font-family:Inter,system-ui,sans-serif;margin:0}main{width:min(800px,calc(100% - 40px));margin:auto;padding:40px 0 64px}.back{color:#bbb;text-decoration:none}.back:hover{color:#fff}h1{font-size:clamp(2.3rem,7vw,4rem);line-height:1;margin:4rem 0 1rem}.lead{color:#bbb;line-height:1.7;max-width:60ch}form{margin-top:2rem;display:grid;gap:1rem}.field{display:grid;gap:.45rem}label{font-size:.9rem;color:#ddd}input,textarea,select{width:100%;padding:.9rem;border:1px solid #333;border-radius:8px;background:#111;color:#fff;font:inherit}textarea{min-height:130px;resize:vertical}input:focus,textarea:focus,select:focus{outline:2px solid #fff;outline-offset:2px}button{padding:1rem;background:#fff;color:#000;border:0;border-radius:10px;font-weight:700;cursor:pointer}button:disabled{cursor:wait;opacity:.7}.consent{display:flex;align-items:flex-start;gap:.65rem;color:#bbb;font-size:.86rem}.consent input{width:auto;margin-top:.2rem}.consent a,footer a{color:#fff}.form-status{min-height:1.4em;color:#bbb}.form-status--success{color:#8fe3b0}.form-status--error{color:#ff9a9a}.hp-field{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}footer{border-top:1px solid #272727;padding-top:1.5rem;margin-top:3rem;color:#888;font-size:.85rem}
+  </style>
 </head>
-
 <body>
-
-<h1>Call gratuita di 15 minuti</h1>
-
-<p>
-Raccontaci cosa vuoi migliorare nel tuo brand o nel tuo marketing.
-Ti risponderemo entro 24 ore per fissare una call.
-</p>
-
-<form action="https://formspree.io/f/xkoqwvgp" method="POST">
-
-<input type="hidden" name="_subject" value="Nuovo lead DualFrame">
-
-<input type="text" name="nome" placeholder="Nome e cognome" required>
-
-<input type="text" name="azienda" placeholder="Azienda / Brand">
-
-<input type="email" name="email" placeholder="Email" required>
-
-<textarea name="obiettivo" placeholder="Cosa vuoi migliorare?" required></textarea>
-
-<select name="budget">
-<option value="">Budget indicativo</option>
-<option value="500-1000">500–1000€</option>
-<option value="1000-2500">1000–2500€</option>
-<option value="2500-5000">2500–5000€</option>
-<option value="5000+">5000€+</option>
-</select>
-
-<button type="submit">Richiedi la call</button>
-
-</form>
-
+  <main>
+    <a class="back" href="index.html">← Torna al sito</a>
+    <h1>Call gratuita di 15 minuti</h1>
+    <p class="lead">Raccontaci cosa vuoi migliorare nel tuo brand o nel tuo marketing. Ti risponderemo entro 24 ore per organizzare un primo confronto.</p>
+    <form id="callForm" action="https://formspree.io/f/xkoqwvgp" method="POST" data-ajax-form aria-describedby="callFormStatus">
+      <input type="hidden" name="_subject" value="Nuovo lead Dualframe" />
+      <input type="text" name="_gotcha" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true" />
+      <div class="field"><label for="call-name">Nome e cognome</label><input id="call-name" type="text" name="nome" autocomplete="name" required /></div>
+      <div class="field"><label for="call-company">Azienda o brand</label><input id="call-company" type="text" name="azienda" autocomplete="organization" /></div>
+      <div class="field"><label for="call-email">Email</label><input id="call-email" type="email" name="email" autocomplete="email" required /></div>
+      <div class="field"><label for="call-goal">Cosa vuoi migliorare?</label><textarea id="call-goal" name="obiettivo" required></textarea></div>
+      <div class="field"><label for="call-budget">Budget indicativo</label><select id="call-budget" name="budget"><option value="">Seleziona una fascia</option><option value="500-1000">500–1.000 €</option><option value="1000-2500">1.000–2.500 €</option><option value="2500-5000">2.500–5.000 €</option><option value="5000+">Oltre 5.000 €</option></select></div>
+      <div class="consent"><input id="call-privacy" type="checkbox" name="privacy_acknowledged" value="yes" required /><label for="call-privacy">Ho letto l'<a href="privacy.html" target="_blank" rel="noopener">informativa privacy</a>.</label></div>
+      <div id="callFormStatus" class="form-status" role="status" aria-live="polite"></div>
+      <button type="submit">Richiedi la call</button>
+    </form>
+    <footer><a href="privacy.html">Privacy</a> · © 2026 Dualframe</footer>
+  </main>
+  <script src="form-handler.js" defer></script>
 </body>
 </html>
+
