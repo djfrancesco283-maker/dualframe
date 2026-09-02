@@ -58,6 +58,13 @@ solo perché alcuni scraper social non leggono webp e sono referenziate da
 `og:image`. Ogni `<img>` deve avere `alt`, `width` e `height` (evita layout
 shift) e, se sotto la piega, `loading="lazy" decoding="async"`.
 
+**Servizi.** Ogni pagina servizio dichiara il proprio accento sul body
+(`<body class="service-detail-body" data-accent="marketing">`): `identity`,
+`marketing`, `innovation` e `motion` ridefiniscono `--detail-accent` e
+`--detail-glow` in `service-detail.css`. Le card in homepage usano lo stesso
+attributo (`data-accent` su `.service-card`) con i colori in `luxury.css`.
+Aggiungendo un quinto servizio vanno toccati entrambi i punti.
+
 **Senza JavaScript.** Gli elementi `.reveal` partono a `opacity: 0` e vengono
 mostrati da `script.js`. Se aggiungi una pagina che carica `style.css`, aggiungi
 anche `<noscript><link rel="stylesheet" href="no-js.css" /></noscript>` nel

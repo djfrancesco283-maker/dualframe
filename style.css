@@ -461,6 +461,8 @@ section {
 
 /* ============================================
    SERVICES
+   Layout e colori vivono in luxury.css, l'unico foglio caricato
+   dalla pagina che contiene queste card. Qui solo la base condivisa.
    ============================================ */
 #services {
   background: var(--bg);
@@ -477,29 +479,10 @@ section {
 }
 
 .service-card {
+  position: relative;
   background: var(--bg);
   padding: 3rem;
-  position: relative;
   transition: var(--transition);
-  cursor: default;
-}
-
-.service-card:hover {
-  background: var(--bg-2);
-}
-
-.service-card:hover .service-arrow {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.service-num {
-  font-family: var(--font-display);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  color: var(--text-dim);
-  margin-bottom: 2rem;
 }
 
 .service-card h3 {
@@ -511,17 +494,6 @@ section {
   font-size: 0.9rem;
   color: var(--text-muted);
   line-height: 1.8;
-}
-
-.service-arrow {
-  position: absolute;
-  top: 3rem;
-  right: 3rem;
-  font-size: 1.25rem;
-  color: var(--accent-2);
-  opacity: 0;
-  transform: translateX(-10px);
-  transition: var(--transition);
 }
 
 /* ============================================
@@ -1347,9 +1319,8 @@ footer {
 
   .section-header { margin-bottom: 2.5rem; }
 
-  .services-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .services-grid { grid-template-columns: 1fr; }
   .service-card { padding: 1.75rem; }
-  .service-arrow { display: none; }
 
   .work-grid { grid-template-columns: 1fr; }
 

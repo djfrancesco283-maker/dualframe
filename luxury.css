@@ -158,7 +158,9 @@
   50% { box-shadow: 0 12px 36px rgba(224, 112, 64, 0.18); }
 }
 
-/* Services section premium redesign */
+/* ============================================
+   SERVICES — griglia editoriale
+   ============================================ */
 #services {
   position: relative;
   background:
@@ -181,84 +183,169 @@
   line-height: 0.95;
 }
 
+#services .section-lead {
+  max-width: 52ch;
+  margin-top: 1.25rem;
+  color: rgba(240, 240, 240, 0.62);
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+
+/* Ogni card porta il proprio accento: la sezione smette di essere
+   quattro blocchi di testo identici. */
 #services .services-grid {
-  border-radius: 14px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
   border: 1px solid rgba(255, 255, 255, 0.09);
-  background: rgba(255, 255, 255, 0.02);
-  backdrop-filter: blur(2px);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.07);
+  overflow: hidden;
 }
 
 #services .service-card {
-  display: block;
+  --accent: #e07040;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 340px;
+  padding: 3rem 3rem 2.5rem;
   cursor: pointer;
-  min-height: 290px;
-  padding: 3.1rem 3rem 2.6rem;
   background:
     linear-gradient(160deg, rgba(255, 255, 255, 0.02), transparent 45%),
-    rgba(10, 10, 10, 0.78);
-  transition:
-    background 560ms var(--lux-ease),
-    border-color 560ms var(--lux-ease),
-    box-shadow 560ms var(--lux-ease);
+    rgba(10, 10, 10, 0.86);
+  transition: background 560ms var(--lux-ease);
 }
 
+#services .service-card[data-accent="marketing"]  { --accent: #2a8a7a; }
+#services .service-card[data-accent="innovation"] { --accent: #c9a227; }
+#services .service-card[data-accent="motion"]     { --accent: #6b6ff0; }
+
+/* Hairline d'accento che si estende all'hover */
 #services .service-card::before {
   content: "";
   position: absolute;
-  inset: 0;
-  border: 1px solid transparent;
-  border-radius: 0;
-  pointer-events: none;
-  transition: border-color 560ms var(--lux-ease);
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: var(--accent);
+  transition: width 620ms var(--lux-ease);
 }
 
-#services .service-card:hover {
+#services .service-card:hover,
+#services .service-card:focus-visible {
   background:
-    linear-gradient(160deg, rgba(255, 255, 255, 0.04), transparent 45%),
-    rgba(16, 16, 16, 0.9);
-  box-shadow: 0 24px 46px rgba(0, 0, 0, 0.28);
+    linear-gradient(160deg, rgba(255, 255, 255, 0.045), transparent 45%),
+    rgba(17, 17, 17, 0.94);
 }
 
-#services .service-card:hover::before {
-  border-color: rgba(224, 112, 64, 0.28);
+#services .service-card:hover::before,
+#services .service-card:focus-visible::before {
+  width: 100%;
 }
 
+/* Numerale in filigrana: dà scala e ritmo senza aggiungere rumore */
 #services .service-num {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.4rem;
-  height: 2.4rem;
-  margin-bottom: 1.7rem;
-  border-radius: 999px;
-  font-size: 0.7rem;
-  color: rgba(255, 255, 255, 0.82);
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.09);
+  position: absolute;
+  top: 0.4rem;
+  right: 1.6rem;
+  font-family: var(--font-display);
+  font-size: 7.5rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.06em;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.07);
+  pointer-events: none;
+  user-select: none;
+  transition: -webkit-text-stroke-color 560ms var(--lux-ease);
+}
+
+#services .service-card:hover .service-num {
+  -webkit-text-stroke-color: color-mix(in srgb, var(--accent) 32%, transparent);
 }
 
 #services .service-card h3 {
-  font-size: clamp(1.6rem, 2.4vw, 2rem);
-  margin-bottom: 1rem;
+  position: relative;
+  font-size: clamp(1.5rem, 2.2vw, 1.9rem);
+  margin-bottom: 0.9rem;
   color: var(--white);
 }
 
-#services .service-card p {
-  max-width: 37ch;
-  font-size: 1.02rem;
-  color: rgba(240, 240, 240, 0.7);
-  line-height: 1.65;
+#services .service-promise {
+  position: relative;
+  max-width: 30ch;
+  text-wrap: balance;
+  margin-bottom: 0.85rem;
+  font-family: var(--font-display);
+  font-size: 1.12rem;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  color: var(--accent);
+}
+
+#services .service-copy {
+  max-width: 40ch;
+  margin-bottom: 1.6rem;
+  font-size: 0.97rem;
+  line-height: 1.7;
+  color: rgba(240, 240, 240, 0.66);
+}
+
+#services .service-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-bottom: 1.8rem;
+  list-style: none;
+}
+
+#services .service-tags li {
+  padding: 0.3rem 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 100px;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: rgba(240, 240, 240, 0.6);
+  transition: border-color 460ms var(--lux-ease), color 460ms var(--lux-ease);
+}
+
+#services .service-card:hover .service-tags li {
+  border-color: color-mix(in srgb, var(--accent) 38%, transparent);
+  color: rgba(255, 255, 255, 0.82);
+}
+
+#services .service-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: auto;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  transition: color 420ms var(--lux-ease), gap 420ms var(--lux-ease);
+}
+
+#services .service-card:hover .service-more,
+#services .service-card:focus-visible .service-more {
+  color: var(--white);
+  gap: 0.85rem;
 }
 
 #services .service-arrow {
-  opacity: 0.42;
-  transform: translateX(0);
-  transition: transform 420ms var(--lux-ease), opacity 420ms var(--lux-ease);
+  color: var(--accent);
 }
 
-#services .service-card:hover .service-arrow {
-  opacity: 1;
-  transform: translateX(8px);
+@media (max-width: 900px) {
+  #services .services-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 768px) {
@@ -270,14 +357,28 @@
     font-size: clamp(2.2rem, 12vw, 3.2rem);
   }
 
-  #services .service-card {
-    min-height: auto;
-    padding: 2rem 1.45rem;
+  #services .section-lead {
+    font-size: 0.97rem;
   }
 
-  #services .service-card p {
-    font-size: 0.97rem;
-    line-height: 1.6;
+  #services .service-card {
+    min-height: auto;
+    padding: 2.1rem 1.5rem 1.9rem;
+  }
+
+  #services .service-num {
+    top: 0.3rem;
+    right: 1rem;
+    font-size: 4.6rem;
+  }
+
+  #services .service-promise {
+    font-size: 1.05rem;
+  }
+
+  #services .service-copy {
+    font-size: 0.95rem;
+    margin-bottom: 1.3rem;
   }
 }
 

@@ -5,16 +5,37 @@
   --detail-border: rgba(255, 255, 255, 0.09);
   --detail-text: #f3f3f0;
   --detail-muted: rgba(243, 243, 240, 0.72);
-  --detail-dim: rgba(243, 243, 240, 0.44);
+  --detail-dim: rgba(243, 243, 240, 0.58);
   --detail-accent: #e07040;
   --detail-accent-2: #2a8a7a;
+  --detail-glow: rgba(224, 112, 64, 0.12);
   --detail-shadow: 0 28px 80px rgba(0, 0, 0, 0.34);
+}
+
+/* Ogni servizio ha il suo accento: le quattro pagine devono leggersi come
+   una famiglia, non come la stessa pagina con le parole cambiate. */
+body.service-detail-body[data-accent="marketing"] {
+  --detail-accent: #2a8a7a;
+  --detail-accent-2: #e07040;
+  --detail-glow: rgba(42, 138, 122, 0.14);
+}
+
+body.service-detail-body[data-accent="innovation"] {
+  --detail-accent: #c9a227;
+  --detail-accent-2: #e07040;
+  --detail-glow: rgba(201, 162, 39, 0.12);
+}
+
+body.service-detail-body[data-accent="motion"] {
+  --detail-accent: #6b6ff0;
+  --detail-accent-2: #2a8a7a;
+  --detail-glow: rgba(107, 111, 240, 0.14);
 }
 
 body.service-detail-body {
   background:
-    radial-gradient(80% 70% at 0% 0%, rgba(224, 112, 64, 0.12), transparent 55%),
-    radial-gradient(60% 70% at 100% 100%, rgba(42, 138, 122, 0.1), transparent 50%),
+    radial-gradient(80% 70% at 0% 0%, var(--detail-glow), transparent 55%),
+    radial-gradient(60% 70% at 100% 100%, rgba(42, 138, 122, 0.08), transparent 50%),
     var(--detail-bg);
   color: var(--detail-text);
 }
@@ -22,8 +43,21 @@ body.service-detail-body {
 .service-shell {
   width: min(1120px, calc(100% - 2rem));
   margin: 0 auto;
-  /* clears the fixed site navbar */
+  /* lascia spazio alla navbar fissa */
   padding: 8.5rem 0 4rem;
+}
+
+/* style.css applica `section { padding: 8rem 0 }` a livello globale. Qui i
+   blocchi sono impilati dentro lo shell e il ritmo lo danno i margini: senza
+   questo reset ogni sezione porta 256px di vuoto. */
+.service-shell > section {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.service-shell > .service-panel,
+.service-shell > .service-process {
+  padding: 1.9rem 1.7rem;
 }
 
 @media (max-width: 768px) {
@@ -71,6 +105,8 @@ body.service-detail-body {
 .service-hero-side,
 .service-panel,
 .service-proof,
+.service-process,
+.service-project,
 .service-cta-band {
   border: 1px solid var(--detail-border);
   border-radius: 18px;
@@ -91,7 +127,7 @@ body.service-detail-body {
   width: 240px;
   height: 240px;
   border-radius: 999px;
-  background: radial-gradient(circle, rgba(224, 112, 64, 0.2), transparent 68%);
+  background: radial-gradient(circle, var(--detail-glow), transparent 68%);
   pointer-events: none;
 }
 
@@ -112,7 +148,7 @@ body.service-detail-body {
   height: 7px;
   border-radius: 999px;
   background: var(--detail-accent);
-  box-shadow: 0 0 0 10px rgba(224, 112, 64, 0.08);
+  box-shadow: 0 0 0 10px color-mix(in srgb, var(--detail-accent) 12%, transparent);
 }
 
 .service-title {
@@ -239,7 +275,13 @@ body.service-detail-body {
   line-height: 1.75;
 }
 
+.service-proof {
+  display: flex;
+  flex-direction: column;
+}
+
 .service-proof-quote {
+  margin-block: auto;
   font-family: var(--font-display);
   font-size: clamp(1.3rem, 3vw, 2rem);
   line-height: 1.15;
@@ -249,6 +291,175 @@ body.service-detail-body {
 .service-proof-quote em {
   color: var(--detail-accent);
   font-style: normal;
+}
+
+/* ============================================
+   PROCESSO
+   ============================================ */
+.service-process {
+  padding: 1.9rem 1.7rem;
+  margin-bottom: 1.5rem;
+}
+
+.service-steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.4rem;
+  list-style: none;
+  counter-reset: none;
+}
+
+.service-step {
+  position: relative;
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--detail-border);
+}
+
+/* pallino sulla linea: rende leggibile la sequenza senza numeri urlati */
+.service-step::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: var(--detail-accent);
+}
+
+.service-step-num {
+  display: block;
+  margin-bottom: 0.45rem;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--detail-accent);
+}
+
+.service-step-num::after {
+  content: " —";
+  opacity: 0.45;
+}
+
+.service-step strong {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-family: var(--font-display);
+  font-size: 1.08rem;
+  color: var(--detail-text);
+}
+
+.service-step-copy {
+  color: var(--detail-muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* ============================================
+   PROGETTI — la prova visiva che mancava
+   ============================================ */
+.service-projects-block {
+  margin-bottom: 1.5rem;
+}
+
+.service-projects-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.1rem;
+  padding: 0 0.2rem;
+}
+
+.service-projects-head h2 {
+  font-size: 1.1rem;
+}
+
+.service-projects-all {
+  font-size: 0.82rem;
+  color: var(--detail-muted);
+  white-space: nowrap;
+}
+
+.service-projects-all:hover,
+.service-projects-all:focus-visible {
+  color: var(--white);
+}
+
+.service-projects {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.service-project {
+  display: block;
+  padding: 1rem 1rem 1.25rem;
+  transition: border-color 420ms ease, transform 420ms ease;
+}
+
+.service-project:hover,
+.service-project:focus-visible {
+  border-color: color-mix(in srgb, var(--detail-accent) 45%, transparent);
+  transform: translateY(-3px);
+}
+
+.service-project-img {
+  display: block;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  aspect-ratio: 16 / 9;
+}
+
+.service-project-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform 600ms cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.service-project:hover .service-project-img img {
+  transform: scale(1.03);
+}
+
+.service-project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.6rem;
+}
+
+.service-project-tags span {
+  padding: 0.18rem 0.6rem;
+  border: 1px solid var(--detail-border);
+  border-radius: 100px;
+  font-size: 0.66rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--detail-dim);
+}
+
+.service-project strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--detail-text);
+}
+
+.service-project-client {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.82rem;
+  color: var(--detail-dim);
+}
+
+.service-side-item--close strong {
+  color: var(--detail-accent);
 }
 
 .service-cta-band {
@@ -279,11 +490,15 @@ body.service-detail-body {
 @media (max-width: 860px) {
   .service-hero,
   .service-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .service-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .service-stats {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .service-cta-band {
@@ -292,16 +507,23 @@ body.service-detail-body {
   }
 }
 
+@media (max-width: 620px) {
+  .service-steps,
+  .service-projects {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
 @media (max-width: 520px) {
   .service-shell {
     width: min(100% - 1rem, 1120px);
-    padding-top: 1rem;
   }
 
   .service-hero-main,
   .service-hero-side,
   .service-panel,
   .service-proof,
+  .service-process,
   .service-cta-band {
     padding: 1.25rem;
     border-radius: 14px;
