@@ -22,7 +22,14 @@ body.service-detail-body {
 .service-shell {
   width: min(1120px, calc(100% - 2rem));
   margin: 0 auto;
-  padding: 2rem 0 4rem;
+  /* clears the fixed site navbar */
+  padding: 8.5rem 0 4rem;
+}
+
+@media (max-width: 768px) {
+  .service-shell {
+    padding-top: 7rem;
+  }
 }
 
 .service-topbar {
@@ -110,8 +117,9 @@ body.service-detail-body {
 
 .service-title {
   font-family: var(--font-display);
-  font-size: clamp(2.8rem, 7vw, 5.3rem);
-  line-height: 0.92;
+  font-size: clamp(2.1rem, 3.9vw, 3.5rem);
+  line-height: 1;
+  text-wrap: balance;
   letter-spacing: -0.04em;
   margin-bottom: 1.15rem;
 }
@@ -300,7 +308,7 @@ body.service-detail-body {
   }
 
   .service-title {
-    font-size: clamp(2.2rem, 13vw, 3.4rem);
+    font-size: clamp(1.9rem, 8vw, 2.6rem);
   }
 }
 

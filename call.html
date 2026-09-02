@@ -4,24 +4,33 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action https://formspree.io; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self'; connect-src 'self' https://formspree.io; upgrade-insecure-requests" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action https://formspree.io; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self'; connect-src 'self' https://formspree.io; upgrade-insecure-requests" />
   <title>Call gratuita di 15 minuti | Dualframe</title>
   <meta name="description" content="Prenota una call gratuita di 15 minuti con Dualframe per parlare del tuo brand, del marketing e dei tuoi obiettivi." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.dualframe.it/call.html" />
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Dualframe" />
+  <meta property="og:locale" content="it_IT" />
   <meta property="og:title" content="Call gratuita di 15 minuti | Dualframe" />
   <meta property="og:url" content="https://www.dualframe.it/call.html" />
   <meta property="og:image" content="https://www.dualframe.it/assets/img/og-social.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="https://www.dualframe.it/assets/img/og-social.png" />
-  <link rel="icon" type="image/png" href="assets/img/logomark.png" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png" />
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/syne-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="assets/fonts/fonts.css" />
   <style>
-    :root{color-scheme:dark}*{box-sizing:border-box}body{background:#0b0b0c;color:#fff;font-family:Inter,system-ui,sans-serif;margin:0}main{width:min(800px,calc(100% - 40px));margin:auto;padding:40px 0 64px}.back{color:#bbb;text-decoration:none}.back:hover{color:#fff}h1{font-size:clamp(2.3rem,7vw,4rem);line-height:1;margin:4rem 0 1rem}.lead{color:#bbb;line-height:1.7;max-width:60ch}form{margin-top:2rem;display:grid;gap:1rem}.field{display:grid;gap:.45rem}label{font-size:.9rem;color:#ddd}input,textarea,select{width:100%;padding:.9rem;border:1px solid #333;border-radius:8px;background:#111;color:#fff;font:inherit}textarea{min-height:130px;resize:vertical}input:focus,textarea:focus,select:focus{outline:2px solid #fff;outline-offset:2px}button{padding:1rem;background:#fff;color:#000;border:0;border-radius:10px;font-weight:700;cursor:pointer}button:disabled{cursor:wait;opacity:.7}.consent{display:flex;align-items:flex-start;gap:.65rem;color:#bbb;font-size:.86rem}.consent input{width:auto;margin-top:.2rem}.consent a,footer a{color:#fff}.form-status{min-height:1.4em;color:#bbb}.form-status--success{color:#8fe3b0}.form-status--error{color:#ff9a9a}.hp-field{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}footer{border-top:1px solid #272727;padding-top:1.5rem;margin-top:3rem;color:#888;font-size:.85rem}
+    :root{color-scheme:dark}*{box-sizing:border-box}body{background:#0b0b0c;color:#fff;font-family:Inter,system-ui,sans-serif;margin:0}main{width:min(800px,calc(100% - 40px));margin:auto;padding:40px 0 64px}.skip{position:absolute;left:1rem;top:-100%;z-index:10;background:#e07040;color:#000;padding:.75rem 1.5rem;border-radius:0 0 8px 8px;font-weight:600;text-decoration:none;transition:top .2s}.skip:focus{top:0}.back{color:#bbb;text-decoration:none}.back:hover{color:#fff}h1{font-family:Syne,'Trebuchet MS',system-ui,sans-serif;font-weight:800;letter-spacing:-.02em;font-size:clamp(2rem,5.5vw,3.2rem);line-height:1.02;margin:3rem 0 1rem}.lead{color:#bbb;line-height:1.7;max-width:60ch}form{margin-top:2rem;display:grid;gap:1rem}.field{display:grid;gap:.45rem}label{font-size:.9rem;color:#ddd}input,textarea,select{width:100%;padding:.9rem;border:1px solid #333;border-radius:8px;background:#111;color:#fff;font:inherit}textarea{min-height:130px;resize:vertical}input:focus,textarea:focus,select:focus{outline:2px solid #fff;outline-offset:2px}button{padding:1rem;background:#fff;color:#000;border:0;border-radius:10px;font-weight:700;cursor:pointer}button:disabled{cursor:wait;opacity:.7}.consent{display:flex;align-items:flex-start;gap:.65rem;color:#bbb;font-size:.86rem}.consent input{width:auto;margin-top:.2rem}.consent a,footer a{color:#fff}.form-status{min-height:1.4em;color:#bbb}.form-status--success{color:#8fe3b0}.form-status--error{color:#ff9a9a}.hp-field{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}footer{border-top:1px solid #272727;padding-top:1.5rem;margin-top:3rem;color:#888;font-size:.85rem}
   </style>
 </head>
 <body>
-  <main>
+  <a class="skip" href="#main-content">Vai al contenuto principale</a>
+  <main id="main-content">
     <a class="back" href="index.html">← Torna al sito</a>
     <h1>Call gratuita di 15 minuti</h1>
     <p class="lead">Raccontaci cosa vuoi migliorare nel tuo brand o nel tuo marketing. Ti risponderemo entro 24 ore per organizzare un primo confronto.</p>

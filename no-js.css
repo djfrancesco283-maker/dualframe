@@ -1,0 +1,44 @@
+/* ============================================
+   DUALFRAME — no-JavaScript fallback
+   Loaded only from <noscript> in each page head.
+   ============================================ */
+
+/* .reveal elements start at opacity:0 and are unhidden by script.js. Without
+   JavaScript that leaves the whole page blank, so show everything up front. */
+.reveal,
+#hero .reveal {
+  opacity: 1 !important;
+  transform: none !important;
+  animation: none !important;
+  transition: none !important;
+}
+
+/* The hamburger and the slide-in menu are script-driven; without JS they are
+   dead controls. Hide them and fall back to the always-visible nav links. */
+.hamburger,
+.mobile-menu {
+  display: none !important;
+}
+
+.nav-links {
+  display: flex !important;
+}
+
+@media (max-width: 600px) {
+  .nav-links {
+    gap: 1rem;
+    font-size: 0.8rem;
+  }
+  .nav-links .btn-nav {
+    display: none;
+  }
+}
+
+/* The lightbox needs JS; without it the cover is just an image. */
+.project-cover-zoom {
+  cursor: default;
+}
+
+.project-cover-hint {
+  display: none;
+}

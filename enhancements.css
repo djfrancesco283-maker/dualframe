@@ -47,3 +47,56 @@
 
 .form-status--success { color: #86d9a7; }
 .form-status--error { color: #ff9b9b; }
+
+/* ============================================
+   MOBILE MENU — keyboard safety
+   ============================================ */
+/* The closed menu is only moved off-screen with a transform, so its links stay
+   in the tab order and keyboard users land on invisible controls. Hide it from
+   both the a11y tree and the tab order until it is actually open. */
+.mobile-menu:not(.open) {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Delay the visibility flip so the slide-out still animates. */
+.mobile-menu {
+  transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1), visibility 0s linear 0.5s;
+}
+
+.mobile-menu.open {
+  transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1), visibility 0s;
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+/* ============================================
+   REDUCED MOTION
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Decorative loops that would otherwise freeze mid-cycle. */
+  .marquee-track,
+  .glow-orange,
+  .glow-teal,
+  .outline-text,
+  .scroll-line,
+  .hero-tag::before {
+    animation: none !important;
+  }
+
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

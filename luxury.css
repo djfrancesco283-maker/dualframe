@@ -1,4 +1,4 @@
-/* Luxury motion layer for index_codex only */
+/* Luxury motion layer — hero parallax, magnetic cards, services redesign. */
 
 :root {
   --lux-ease: cubic-bezier(0.22, 1, 0.36, 1);
@@ -146,26 +146,6 @@
 .pricing-card:hover::after,
 .team-card:hover::after {
   transform: translateX(120%);
-}
-
-.lux-ready {
-  opacity: 0;
-  transform: translate3d(0, 24px, 0) scale(0.985);
-  filter: blur(4px);
-}
-
-.lux-visible {
-  opacity: 1;
-  transform: translate3d(0, 0, 0) scale(1);
-  filter: blur(0);
-  transition:
-    transform 850ms var(--lux-ease),
-    opacity 850ms var(--lux-ease),
-    filter 850ms var(--lux-ease);
-}
-
-.work-item.lux-ready {
-  transform: translate3d(0, 26px, 0) scale(0.985);
 }
 
 /* Subtle ambient pulse visible on mobile too */

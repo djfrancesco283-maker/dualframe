@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action https://formspree.io; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self'; connect-src 'self' https://formspree.io; upgrade-insecure-requests" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action https://formspree.io; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self'; connect-src 'self' https://formspree.io; upgrade-insecure-requests" />
   <title>Dualframe — Brand Agency</title>
   <meta name="description" content="Dualframe è una brand agency specializzata in Brand Identity, Marketing e Motion Design. La prima impressione decide tutto. Noi la progettiamo per te." />
   <meta name="keywords" content="brand agency, brand identity, logo design, marketing, motion design, visual design, packaging, Pescara, Italia" />
@@ -30,13 +30,16 @@
   <meta name="twitter:description" content="Brand Identity, Marketing e Motion Design. La prima impressione decide tutto." />
   <meta name="twitter:image" content="https://www.dualframe.it/assets/img/og-social.png" />
 
-  <link rel="icon" type="image/png" href="assets/img/logomark.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@700;800&family=Space+Grotesk:wght@600&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png" />
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/syne-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="assets/fonts/fonts.css" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="enhancements.css" />
   <link rel="stylesheet" href="luxury.css" />
+  <noscript><link rel="stylesheet" href="no-js.css" /></noscript>
 
   <style>
     /* Honeypot anti-spam — nascosto via CSS, non inline */
@@ -80,7 +83,7 @@
       <div class="hero-glow glow-orange"></div>
       <div class="hero-glow glow-teal"></div>
       <!-- Logomark decorativo: eager perché above-the-fold -->
-      <img src="assets/img/logomark.png" alt="" class="hero-logomark" aria-hidden="true" width="600" height="600" />
+      <img src="assets/img/logomark.png" alt="" class="hero-logomark" aria-hidden="true" decoding="async" width="1400" height="1400" />
     </div>
     <div class="hero-content">
       <div class="hero-tag reveal">Brand Agency</div>
@@ -179,7 +182,7 @@
 
         <a href="forloox.html" class="work-item reveal">
           <div class="work-img">
-            <img src="assets/img/projects/forloox.webp" alt="Forloox — Brand Identity per Barberini Ottica, Pescara" class="work-cover" loading="lazy" width="600" height="400" />
+            <img src="assets/img/projects/forloox.webp" alt="Forloox — Brand Identity per Barberini Ottica, Pescara" class="work-cover" loading="lazy" decoding="async" width="1920" height="1080" />
             <div class="work-overlay"><span class="work-view">Vedi progetto →</span></div>
             <div class="work-shape" style="background: #fe4338;"></div>
             <div class="work-label">FORLOOX</div>
@@ -193,7 +196,7 @@
 
         <a href="il-boscaiolo.html" class="work-item reveal">
           <div class="work-img">
-            <img src="assets/img/projects/il-boscaiolo.webp" alt="Il Boscaiolo — Brand Identity per ristorante tradizionale" class="work-cover" loading="lazy" width="600" height="400" />
+            <img src="assets/img/projects/il-boscaiolo.webp" alt="Il Boscaiolo — Brand Identity per ristorante tradizionale" class="work-cover" loading="lazy" decoding="async" width="1920" height="1080" />
             <div class="work-overlay"><span class="work-view">Vedi progetto →</span></div>
             <div class="work-shape" style="background: #926a47;"></div>
             <div class="work-label">IL BOSCAIOLO</div>
@@ -207,7 +210,7 @@
 
         <a href="trustlead.html" class="work-item reveal">
           <div class="work-img">
-            <img src="assets/img/projects/trustlead.webp" alt="Trustlead — Brand Identity e Motion Design per Paolo Nicolai Sport Business" class="work-cover" loading="lazy" width="600" height="400" />
+            <img src="assets/img/projects/trustlead.webp" alt="Trustlead — Brand Identity e Motion Design per Paolo Nicolai Sport Business" class="work-cover" loading="lazy" decoding="async" width="1920" height="1080" />
             <div class="work-overlay"><span class="work-view">Vedi progetto →</span></div>
             <div class="work-shape" style="background: #2f3ef6;"></div>
             <div class="work-label">TRUSTLEAD</div>
@@ -221,7 +224,7 @@
 
         <a href="chef-citeroni.html" class="work-item reveal">
           <div class="work-img">
-            <img src="assets/img/projects/chef-citeroni.webp" alt="Chef Citeroni — Personal Brand per Osteria Ophis, guida Michelin 2024" class="work-cover" loading="lazy" width="600" height="400" />
+            <img src="assets/img/projects/chef-citeroni.webp" alt="Chef Citeroni — Personal Brand per Osteria Ophis, guida Michelin 2024" class="work-cover" loading="lazy" decoding="async" width="1920" height="1080" />
             <div class="work-overlay"><span class="work-view">Vedi progetto →</span></div>
             <div class="work-shape" style="background: #c0392b;"></div>
             <div class="work-label">CHEF CITERONI</div>
@@ -235,7 +238,7 @@
 
         <a href="dinos-bar.html" class="work-item reveal">
           <div class="work-img">
-            <img src="assets/img/projects/dinos-bar.webp" alt="Dino's Bar — Brand Identity e Packaging per Mixology Food & Beverage" class="work-cover" loading="lazy" width="600" height="400" />
+            <img src="assets/img/projects/dinos-bar.webp" alt="Dino's Bar — Brand Identity e Packaging per Mixology Food & Beverage" class="work-cover" loading="lazy" decoding="async" width="1920" height="1080" />
             <div class="work-overlay"><span class="work-view">Vedi progetto →</span></div>
             <div class="work-shape" style="background: #e8927a;"></div>
             <div class="work-label">DINO'S BAR</div>
@@ -249,7 +252,7 @@
 
         <a href="ulivo-dorato.html" class="work-item reveal">
           <div class="work-img">
-            <img src="assets/img/projects/ulivo-dorato.webp" alt="Ulivo Dorato — Brand Identity e Packaging per olio EVO agroalimentare" class="work-cover" loading="lazy" width="600" height="400" />
+            <img src="assets/img/projects/ulivo-dorato.webp" alt="Ulivo Dorato — Brand Identity e Packaging per olio EVO agroalimentare" class="work-cover" loading="lazy" decoding="async" width="1920" height="1080" />
             <div class="work-overlay"><span class="work-view">Vedi progetto →</span></div>
             <div class="work-shape" style="background: #c9a227;"></div>
             <div class="work-label">ULIVO DORATO</div>
@@ -284,7 +287,7 @@
       <div class="team-grid">
         <div class="team-card reveal">
           <div class="team-photo">
-            <img src="assets/img/yvan.jpg" alt="Yvan, Graphic & Motion Designer" loading="lazy" width="300" height="300" />
+            <img src="assets/img/yvan.jpg" alt="Yvan, Graphic & Motion Designer" loading="lazy" decoding="async" width="300" height="300" />
           </div>
           <div class="team-info">
             <h3>Yvan</h3>
@@ -294,7 +297,7 @@
         </div>
         <div class="team-card reveal">
           <div class="team-photo">
-            <img src="assets/img/francesco.jpg" alt="Francesco, Marketing Strategist & Copywriter" loading="lazy" width="300" height="300" />
+            <img src="assets/img/francesco.jpg" alt="Francesco, Marketing Strategist & Copywriter" loading="lazy" decoding="async" width="300" height="300" />
           </div>
           <div class="team-info">
             <h3>Francesco</h3>
@@ -449,7 +452,7 @@
           <!-- Brand -->
           <div class="footer-brand">
             <a href="#hero" class="footer-brand-link" aria-label="Dualframe — torna in cima">
-              <img src="assets/img/logo.png" alt="Dualframe Brand Agency" class="footer-logo-img" loading="lazy" width="800" height="800" />
+              <img src="assets/img/logo.png" alt="Dualframe Brand Agency" class="footer-logo-img" loading="lazy" decoding="async" width="800" height="800" />
             </a>
             <p class="footer-tagline">Brand &amp; Food Visual Design</p>
           </div>
@@ -469,19 +472,19 @@
             <p class="footer-col-label">Social</p>
             <a href="https://www.instagram.com/dualframe__/" target="_blank" rel="noopener noreferrer">
               <span class="footer-social-icon" aria-hidden="true">
-                <img src="assets/img/social/instagram.png" alt="" class="footer-social-png" width="24" height="24" />
+                <img src="assets/img/social/instagram.png" alt="" class="footer-social-png" loading="lazy" decoding="async" width="48" height="48" />
               </span>
               <span>Instagram</span>
             </a>
             <a href="https://www.behance.net/dualframe22" target="_blank" rel="noopener noreferrer">
               <span class="footer-social-icon" aria-hidden="true">
-                <img src="assets/img/social/behance.png" alt="" class="footer-social-png" width="24" height="24" />
+                <img src="assets/img/social/behance.png" alt="" class="footer-social-png" loading="lazy" decoding="async" width="48" height="48" />
               </span>
               <span>Behance</span>
             </a>
             <a href="https://it.pinterest.com/dualframe__/" target="_blank" rel="noopener noreferrer">
               <span class="footer-social-icon" aria-hidden="true">
-                <img src="assets/img/social/pinterest.png" alt="" class="footer-social-png" width="24" height="24" />
+                <img src="assets/img/social/pinterest.png" alt="" class="footer-social-png" loading="lazy" decoding="async" width="48" height="48" />
               </span>
               <span>Pinterest</span>
             </a>
