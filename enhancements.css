@@ -100,3 +100,79 @@ body.menu-open {
     transform: none !important;
   }
 }
+
+/* ============================================
+   ANCORE — spazio per la navbar fissa
+   ============================================ */
+/* Senza offset ogni "vai alla sezione" porta il bersaglio a top:0, cioè dietro
+   la navbar fissa: il titolo resta invisibile e sembra che il link abbia
+   mancato il punto. scroll-margin-top vale sia per lo scroll fluido di
+   script.js sia per l'atterraggio nativo su un URL con #hash. */
+:root {
+  --nav-offset: 112px;
+  /* deve restare allineato a `section { padding: 8rem 0 }` in style.css */
+  --section-pad: 8rem;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --nav-offset: 88px;
+    --section-pad: 4rem;
+  }
+}
+
+/* Bersagli che non hanno padding proprio. */
+main[id],
+#hero {
+  scroll-margin-top: var(--nav-offset);
+}
+
+/* Le sezioni hanno già il loro respiro interno: sommandoci l'offset intero si
+   arriva con quasi un terzo di schermo vuoto. Qui l'offset lo assorbe il
+   padding che c'è già, lasciando un margine voluto sotto la navbar. */
+section[id]:not(#hero) {
+  scroll-margin-top: max(0px, calc(var(--nav-offset) + 2.5rem - var(--section-pad)));
+}
+
+/* Lo scroll fluido lo gestisce script.js elemento per elemento, così resta
+   sotto il controllo di prefers-reduced-motion. Qui copriamo solo il caso in
+   cui la pagina si apre già con un #hash nell'URL. */
+html {
+  scroll-behavior: auto;
+}
+
+/* ============================================
+   AREA DI TOCCO SU SCHERMI TATTILI
+   ============================================ */
+/* Diversi link secondari (ritorni, voci di footer, CTA fantasma) sono alti
+   15-24px: col dito si sbagliano. Un pseudo-elemento allarga l'area cliccabile
+   senza spostare di un pixel il layout, e solo dove si tocca davvero. */
+@media (pointer: coarse) {
+  .footer-legal-link,
+  .footer-col a,
+  .footer-contact-link,
+  .service-back,
+  .service-projects-all,
+  .project-back,
+  .privacy-foot a,
+  .service-legal a,
+  .back,
+  .btn-ghost {
+    position: relative;
+  }
+
+  .footer-legal-link::after,
+  .footer-col a::after,
+  .footer-contact-link::after,
+  .service-back::after,
+  .service-projects-all::after,
+  .project-back::after,
+  .privacy-foot a::after,
+  .service-legal a::after,
+  .back::after,
+  .btn-ghost::after {
+    content: "";
+    position: absolute;
+    inset: -11px -8px;
+  }
+}
