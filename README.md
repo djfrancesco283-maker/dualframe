@@ -58,6 +58,15 @@ solo perché alcuni scraper social non leggono webp e sono referenziate da
 `og:image`. Ogni `<img>` deve avere `alt`, `width` e `height` (evita layout
 shift) e, se sotto la piega, `loading="lazy" decoding="async"`.
 
+Ogni cover progetto esiste in quattro misure: `<slug>-600.webp`,
+`-800.webp`, `-1200.webp` e la piena `<slug>.webp` (1920w). Griglia lavori e
+card servizio usano `srcset` con le prime tre; la cover della pagina progetto
+le usa tutte e quattro, perché la 1920 è anche la sorgente del lightbox a
+schermo intero. Le derivate si rigenerano con `python3 tools/resize_covers.py`.
+Se cambi il `srcset` di una cover, aggiorna anche l'`imagesrcset` del
+`<link rel="preload">` nella stessa pagina: se i due divergono il browser
+scarica due immagini invece di una.
+
 **Servizi.** Ogni pagina servizio dichiara il proprio accento sul body
 (`<body class="service-detail-body" data-accent="marketing">`): `identity`,
 `marketing`, `innovation` e `motion` ridefiniscono `--detail-accent` e
